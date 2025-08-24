@@ -1,21 +1,29 @@
-  /* Custom styles for a cleaner look not handled by Tailwind */
         body {
             font-family: 'Inter', sans-serif;
-            @apply bg-gray-100 text-gray-800;
-            overflow-x: hidden; /* Prevents horizontal scroll on smaller screens */
+            background-color: #f3f4f6;
+            color: #374151;
+            overflow-x: hidden;
         }
         .bg-hero-gradient {
             background-image: linear-gradient(to right, #6A11CB, #2575FC);
         }
         .service-card {
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            @apply hover:transform hover:-translate-y-2 hover:shadow-2xl;
         }
-        /* Style for the testimonial slider */
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
         .testimonial-container {
             scroll-snap-type: x mandatory;
             -webkit-overflow-scrolling: touch;
         }
         .testimonial-card {
             scroll-snap-align: start;
+        }
+        .blog-post-card {
+            transition: transform 0.2s ease-in-out;
+        }
+        .blog-post-card:hover {
+            transform: translateY(-4px);
         }
