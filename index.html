@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mystic Nepal | Digital Solutions</title>
+    <title>Mystic Nepal | Web Development, Video Editing & Digital Solutions</title>
+    <!-- SEO Meta Description -->
+    <meta name="description" content="Mystic Nepal provides professional web development, video editing, and digital marketing services to help your business create a powerful online presence. Learn about our services and read our blog for digital insights.">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome for icons -->
@@ -12,8 +14,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="js/script.js">   
+    <style>
+        /* Custom styles for a cleaner look not handled by Tailwind */
+
+    </style>
 </head>
 <body class="bg-gray-50">
 
@@ -26,6 +30,7 @@
             <div class="hidden md:flex space-x-8 text-lg font-medium">
                 <a href="#services" class="text-gray-600 hover:text-blue-600 transition-colors">Services</a>
                 <a href="#portfolio" class="text-gray-600 hover:text-blue-600 transition-colors">Portfolio</a>
+                <a href="#blog" class="text-gray-600 hover:text-blue-600 transition-colors">Blog</a>
                 <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors">About Us</a>
                 <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
             </div>
@@ -40,6 +45,7 @@
         <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-2">
             <a href="#services" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Services</a>
             <a href="#portfolio" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Portfolio</a>
+            <a href="#blog" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Blog</a>
             <a href="#about" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">About Us</a>
             <a href="#contact" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Contact</a>
         </div>
@@ -112,7 +118,7 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Portfolio Item 1: Web Development -->
                     <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-                        <img src="https://placehold.co/800x600/6A11CB/FFFFFF?text=Web+Project+1" alt="Web Project 1" class="w-full h-48 object-cover">
+                        <img src="https://placehold.co/800x600/6A11CB/FFFFFF?text=Web+Project+1" alt="E-commerce website redesign and development" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-2xl font-semibold mb-2">E-commerce Redesign</h3>
                             <p class="text-gray-600">A full-scale website redesign focusing on user experience and conversion optimization.</p>
@@ -120,7 +126,7 @@
                     </div>
                     <!-- Portfolio Item 2: Video Editing -->
                     <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-                        <img src="https://placehold.co/800x600/2575FC/FFFFFF?text=Video+Project+1" alt="Video Project 1" class="w-full h-48 object-cover">
+                        <img src="https://placehold.co/800x600/2575FC/FFFFFF?text=Video+Project+1" alt="Professional brand story video production" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-2xl font-semibold mb-2">Brand Story Video</h3>
                             <p class="text-gray-600">A compelling 90-second brand story video highlighting a client's mission and values.</p>
@@ -128,7 +134,7 @@
                     </div>
                     <!-- Portfolio Item 3: Digital Creator -->
                     <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-                        <img src="https://placehold.co/800x600/6C2EAD/FFFFFF?text=Digital+Project" alt="Digital Project" class="w-full h-48 object-cover">
+                        <img src="https://placehold.co/800x600/6C2EAD/FFFFFF?text=Digital+Project" alt="Creative social media campaign assets" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-2xl font-semibold mb-2">Social Media Campaign</h3>
                             <p class="text-gray-600">A series of animated graphics and short videos for a month-long social media campaign.</p>
@@ -136,7 +142,7 @@
                     </div>
                     <!-- Portfolio Item 4: Web Development -->
                     <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-                        <img src="https://placehold.co/800x600/2C528B/FFFFFF?text=Web+Project+2" alt="Web Project 2" class="w-full h-48 object-cover">
+                        <img src="https://placehold.co/800x600/2C528B/FFFFFF?text=Web+Project+2" alt="Custom CMS platform development" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-2xl font-semibold mb-2">Custom CMS Platform</h3>
                             <p class="text-gray-600">Developed a custom content management system to streamline a client's editorial workflow.</p>
@@ -144,7 +150,7 @@
                     </div>
                     <!-- Portfolio Item 5: Video Editing -->
                     <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-                        <img src="https://placehold.co/800x600/805AD5/FFFFFF?text=Video+Project+2" alt="Video Project 2" class="w-full h-48 object-cover">
+                        <img src="https://placehold.co/800x600/805AD5/FFFFFF?text=Video+Project+2" alt="Animated explainer video series" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-2xl font-semibold mb-2">Explainer Video Series</h3>
                             <p class="text-gray-600">A series of animated explainer videos simplifying complex topics for a B2B audience.</p>
@@ -152,7 +158,7 @@
                     </div>
                     <!-- Portfolio Item 6: Python Dev -->
                     <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-                        <img src="https://placehold.co/800x600/3182CE/FFFFFF?text=Python+Project" alt="Python Project" class="w-full h-48 object-cover">
+                        <img src="https://placehold.co/800x600/3182CE/FFFFFF?text=Python+Project" alt="Python-based automated data scraper" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-2xl font-semibold mb-2">Automated Data Scraper</h3>
                             <p class="text-gray-600">A Python-based script to automatically collect and analyze public data from multiple sources.</p>
@@ -161,12 +167,46 @@
                 </div>
             </div>
         </section>
+        
+        <!-- Blog Section -->
+        <section id="blog" class="container mx-auto px-4 py-20">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Our Blog</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Blog Post 1 -->
+                <a href="#" class="blog-post-card block bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200">
+                    <img src="https://placehold.co/800x400/1D4ED8/FFFFFF?text=Blog+Post+1" alt="Image of a sleek, modern website design" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-blue-800">5 Reasons Your Business Needs a Professional Website</h3>
+                        <p class="text-sm text-gray-500 mb-4">Published on August 24, 2024</p>
+                        <p class="text-gray-700 leading-relaxed">In today's digital world, a professional website is more than just an online brochure; it's a powerful tool for growth. Discover the key benefits of having a strong web presence...</p>
+                    </div>
+                </a>
+                <!-- Blog Post 2 -->
+                <a href="#" class="blog-post-card block bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200">
+                    <img src="https://placehold.co/800x400/2575FC/FFFFFF?text=Blog+Post+2" alt="Image of a video camera and editing timeline" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-purple-800">Video Marketing 101: A Guide for Small Businesses</h3>
+                        <p class="text-sm text-gray-500 mb-4">Published on August 15, 2024</p>
+                        <p class="text-gray-700 leading-relaxed">Learn how to create engaging video content without a Hollywood budget. We cover everything from scripting to simple editing tips that can transform your brand's story...</p>
+                    </div>
+                </a>
+                <!-- Blog Post 3 -->
+                <a href="#" class="blog-post-card block bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200">
+                    <img src="https://placehold.co/800x400/6A11CB/FFFFFF?text=Blog+Post+3" alt="Image of a graphic design program interface" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-green-800">The Power of Visuals: How Digital Art Captivates Audiences</h3>
+                        <p class="text-sm text-gray-500 mb-4">Published on August 10, 2024</p>
+                        <p class="text-gray-700 leading-relaxed">Digital art is more than just pretty pictures—it's a tool for communication. We explore how well-crafted graphics can improve user engagement and brand recognition...</p>
+                    </div>
+                </a>
+            </div>
+        </section>
 
         <!-- About Us Section -->
         <section id="about" class="container mx-auto px-4 py-20">
             <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
                 <div class="lg:w-1/2">
-                    <img src="https://placehold.co/800x600/A0AEC0/FFFFFF?text=About+Image" alt="Mystic Nepal Team" class="w-full rounded-2xl shadow-xl">
+                    <img src="https://placehold.co/800x600/A0AEC0/FFFFFF?text=About+Image" alt="Mystic Nepal team collaborating in an office" class="w-full rounded-2xl shadow-xl">
                 </div>
                 <div class="lg:w-1/2">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4">Who We Are</h2>
@@ -174,7 +214,7 @@
                         At Mystic Nepal, we believe in the power of digital alchemy. We are a passionate team of web developers, video editors, and digital strategists dedicated to transforming your ideas into powerful online realities. Our journey began with a simple mission: to blend technical expertise with creative vision to build compelling and effective digital solutions for businesses of all sizes.
                     </p>
                     <p class="text-gray-600 text-lg mt-4 leading-relaxed">
-                        We are more than just a service provider; we are your digital partner. By focusing on quality, innovation, and a deep understanding of your brand, we ensure that every project we undertake is not just completed, but masterfully crafted to meet your goals and exceed expectations.
+                        We are more than just a service provider; we are your digital partner. By focusing on quality, innovation, and a deep understanding of your brand, we ensure that every project we undertake is not just completed, but masterfully crafted to meet your goals and exceed expectations. To learn more about how we can help your business, check out our full list of <a href="#services" class="text-blue-600 hover:underline font-semibold">services</a>.
                     </p>
                 </div>
             </div>
@@ -271,7 +311,46 @@
     </footer>
 
     <script>
-     
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // JavaScript for smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu after clicking a link
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // JavaScript for form submission (simulated)
+        const contactForm = document.getElementById('contact-form');
+        const formMessage = document.getElementById('form-message');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Simulate form submission success
+            formMessage.textContent = 'Thank you for your message! We will get back to you soon.';
+            formMessage.classList.remove('hidden');
+            formMessage.classList.add('text-green-600', 'font-semibold');
+
+            // Reset the form after a short delay
+            setTimeout(() => {
+                contactForm.reset();
+                formMessage.classList.add('hidden');
+            }, 5000);
+        });
     </script>
 </body>
 </html>
