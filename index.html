@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystic Nepal | Digital Solutions</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts for Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="js/script.js">   
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navigation Bar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <span class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Mystic Nepal</span>
+            </a>
+            <div class="hidden md:flex space-x-8 text-lg font-medium">
+                <a href="#services" class="text-gray-600 hover:text-blue-600 transition-colors">Services</a>
+                <a href="#portfolio" class="text-gray-600 hover:text-blue-600 transition-colors">Portfolio</a>
+                <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors">About Us</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="text-gray-600 text-2xl focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-2">
+            <a href="#services" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Services</a>
+            <a href="#portfolio" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Portfolio</a>
+            <a href="#about" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">About Us</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Contact</a>
+        </div>
+    </header>
+
+    <main class="space-y-24">
+
+        <!-- Hero Section -->
+        <section id="hero" class="bg-hero-gradient text-white py-20 md:py-32">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+                    Crafting Digital Experiences That Connect.
+                </h1>
+                <p class="mt-4 text-lg md:text-2xl max-w-3xl mx-auto">
+                    From captivating websites to cinematic videos, we bring your vision to life.
+                </p>
+                <a href="#contact" class="mt-8 inline-block px-8 py-4 bg-white text-blue-600 font-bold text-lg rounded-full shadow-lg hover:shadow-xl transition-all">
+                    Start Your Project
+                </a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Our Services</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1: Web Development -->
+                <div class="service-card bg-white p-8 rounded-2xl shadow-lg border border-gray-200 text-center">
+                    <div class="text-4xl text-blue-600 mb-4"><i class="fas fa-code"></i></div>
+                    <h3 class="text-2xl font-semibold mb-2">Web Development</h3>
+                    <p class="text-gray-600">Building dynamic, responsive, and high-performance websites tailored to your needs. From e-commerce to custom applications.</p>
+                </div>
+                <!-- Service Card 2: Video Editing -->
+                <div class="service-card bg-white p-8 rounded-2xl shadow-lg border border-gray-200 text-center">
+                    <div class="text-4xl text-purple-600 mb-4"><i class="fas fa-film"></i></div>
+                    <h3 class="text-2xl font-semibold mb-2">Video Editing</h3>
+                    <p class="text-gray-600">Crafting compelling narratives from raw footage, creating cinematic experiences for brands, marketing, and social media.</p>
+                </div>
+                <!-- Service Card 3: Digital Creator -->
+                <div class="service-card bg-white p-8 rounded-2xl shadow-lg border border-gray-200 text-center">
+                    <div class="text-4xl text-green-600 mb-4"><i class="fas fa-magic"></i></div>
+                    <h3 class="text-2xl font-semibold mb-2">Digital Creator</h3>
+                    <p class="text-gray-600">Bringing creative ideas to life through a blend of design, animation, and visual storytelling for all digital platforms.</p>
+                </div>
+                <!-- Service Card 4: Python & Web Developer -->
+                <div class="service-card bg-white p-8 rounded-2xl shadow-lg border border-gray-200 text-center">
+                    <div class="text-4xl text-yellow-600 mb-4"><i class="fas fa-robot"></i></div>
+                    <h3 class="text-2xl font-semibold mb-2">Python & Web Dev</h3>
+                    <p class="text-gray-600">Developing robust backend systems, automation scripts, and powerful web applications using the Python ecosystem.</p>
+                </div>
+                <!-- Service Card 5: Social Media Strategist -->
+                <div class="service-card bg-white p-8 rounded-2xl shadow-lg border border-gray-200 text-center">
+                    <div class="text-4xl text-red-600 mb-4"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="text-2xl font-semibold mb-2">Social Media Strategy</h3>
+                    <p class="text-gray-600">Designing data-driven social media plans to grow your brand, engage your audience, and drive measurable results.</p>
+                </div>
+                <!-- Service Card 6: Digital Manager -->
+                <div class="service-card bg-white p-8 rounded-2xl shadow-lg border border-gray-200 text-center">
+                    <div class="text-4xl text-indigo-600 mb-4"><i class="fas fa-bullhorn"></i></div>
+                    <h3 class="text-2xl font-semibold mb-2">Digital Manager</h3>
+                    <p class="text-gray-600">Overseeing your digital presence to ensure consistent branding, effective campaigns, and streamlined online operations.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="bg-gray-100 py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Our Work</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Portfolio Item 1: Web Development -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                        <img src="https://placehold.co/800x600/6A11CB/FFFFFF?text=Web+Project+1" alt="Web Project 1" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold mb-2">E-commerce Redesign</h3>
+                            <p class="text-gray-600">A full-scale website redesign focusing on user experience and conversion optimization.</p>
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 2: Video Editing -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                        <img src="https://placehold.co/800x600/2575FC/FFFFFF?text=Video+Project+1" alt="Video Project 1" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold mb-2">Brand Story Video</h3>
+                            <p class="text-gray-600">A compelling 90-second brand story video highlighting a client's mission and values.</p>
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 3: Digital Creator -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                        <img src="https://placehold.co/800x600/6C2EAD/FFFFFF?text=Digital+Project" alt="Digital Project" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold mb-2">Social Media Campaign</h3>
+                            <p class="text-gray-600">A series of animated graphics and short videos for a month-long social media campaign.</p>
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 4: Web Development -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                        <img src="https://placehold.co/800x600/2C528B/FFFFFF?text=Web+Project+2" alt="Web Project 2" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold mb-2">Custom CMS Platform</h3>
+                            <p class="text-gray-600">Developed a custom content management system to streamline a client's editorial workflow.</p>
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 5: Video Editing -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                        <img src="https://placehold.co/800x600/805AD5/FFFFFF?text=Video+Project+2" alt="Video Project 2" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold mb-2">Explainer Video Series</h3>
+                            <p class="text-gray-600">A series of animated explainer videos simplifying complex topics for a B2B audience.</p>
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 6: Python Dev -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                        <img src="https://placehold.co/800x600/3182CE/FFFFFF?text=Python+Project" alt="Python Project" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold mb-2">Automated Data Scraper</h3>
+                            <p class="text-gray-600">A Python-based script to automatically collect and analyze public data from multiple sources.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="container mx-auto px-4 py-20">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+                <div class="lg:w-1/2">
+                    <img src="https://placehold.co/800x600/A0AEC0/FFFFFF?text=About+Image" alt="Mystic Nepal Team" class="w-full rounded-2xl shadow-xl">
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Who We Are</h2>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        At Mystic Nepal, we believe in the power of digital alchemy. We are a passionate team of web developers, video editors, and digital strategists dedicated to transforming your ideas into powerful online realities. Our journey began with a simple mission: to blend technical expertise with creative vision to build compelling and effective digital solutions for businesses of all sizes.
+                    </p>
+                    <p class="text-gray-600 text-lg mt-4 leading-relaxed">
+                        We are more than just a service provider; we are your digital partner. By focusing on quality, innovation, and a deep understanding of your brand, we ensure that every project we undertake is not just completed, but masterfully crafted to meet your goals and exceed expectations.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="bg-gray-100 py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">What Our Clients Say</h2>
+                <!-- Testimonial slider container -->
+                <div class="flex overflow-x-auto gap-8 pb-4 testimonial-container">
+                    <!-- Testimonial Card 1 -->
+                    <div class="testimonial-card flex-none w-full sm:w-1/2 lg:w-1/3 p-4">
+                        <div class="bg-white p-6 rounded-2xl shadow-lg h-full flex flex-col justify-between">
+                            <p class="text-gray-700 text-lg italic leading-relaxed">
+                                "Mystic Nepal delivered a stunning website and a compelling brand video that perfectly captured our essence. Their team was professional, creative, and a pleasure to work with. Highly recommend!"
+                            </p>
+                            <div class="mt-4">
+                                <p class="font-semibold text-blue-600">- Jane Doe</p>
+                                <p class="text-sm text-gray-500">CEO, Tech Innovators</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial Card 2 -->
+                    <div class="testimonial-card flex-none w-full sm:w-1/2 lg:w-1/3 p-4">
+                        <div class="bg-white p-6 rounded-2xl shadow-lg h-full flex flex-col justify-between">
+                            <p class="text-gray-700 text-lg italic leading-relaxed">
+                                "Their social media strategy completely transformed our online presence. We saw a huge increase in engagement and a direct impact on our sales. Mystic Nepal is the real deal."
+                            </p>
+                            <div class="mt-4">
+                                <p class="font-semibold text-blue-600">- John Smith</p>
+                                <p class="text-sm text-gray-500">Marketing Director, Global Goods</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial Card 3 -->
+                    <div class="testimonial-card flex-none w-full sm:w-1/2 lg:w-1/3 p-4">
+                        <div class="bg-white p-6 rounded-2xl shadow-lg h-full flex flex-col justify-between">
+                            <p class="text-gray-700 text-lg italic leading-relaxed">
+                                "The Python automation they built for us saved countless hours of manual work. Their technical skills and attention to detail are unmatched. A fantastic partner."
+                            </p>
+                            <div class="mt-4">
+                                <p class="font-semibold text-blue-600">- Emily Chen</p>
+                                <p class="text-sm text-gray-500">Operations Manager, Data Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="container mx-auto px-4 py-20">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Let's Create Something Amazing</h2>
+                <p class="text-gray-600 text-lg mb-8">
+                    Ready to start your digital journey? Fill out the form below and we'll get in touch with you shortly.
+                </p>
+                <form id="contact-form" class="bg-white p-8 rounded-2xl shadow-xl space-y-6">
+                    <div>
+                        <input type="text" id="name" placeholder="Your Name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all">
+                    </div>
+                    <div>
+                        <input type="email" id="email" placeholder="Your Email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all">
+                    </div>
+                    <div>
+                        <textarea id="message" rows="5" placeholder="Your Message" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"></textarea>
+                    </div>
+                    <button type="submit" class="w-full px-6 py-3 bg-blue-600 text-white font-bold rounded-full shadow-lg hover:bg-blue-700 transition-colors">
+                        Send Message
+                    </button>
+                    <!-- Message container for form submission feedback -->
+                    <div id="form-message" class="mt-4 text-center hidden"></div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex flex-col sm:flex-row justify-center sm:justify-between items-center mb-6 border-b border-gray-700 pb-6">
+                <p class="text-2xl font-bold text-gray-300 mb-4 sm:mb-0">Mystic Nepal</p>
+                <div class="flex space-x-6 text-2xl">
+                    <a href="#" aria-label="Facebook" class="text-gray-400 hover:text-blue-500 transition-colors"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram" class="text-gray-400 hover:text-pink-500 transition-colors"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn" class="text-gray-400 hover:text-blue-700 transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="YouTube" class="text-gray-400 hover:text-red-600 transition-colors"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <p class="text-gray-500">&copy; 2024 Mystic Nepal. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+     
+    </script>
+</body>
+</html>
