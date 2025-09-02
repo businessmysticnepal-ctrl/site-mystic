@@ -105,10 +105,11 @@
       box-shadow: 0 12px 30px red
     }
 
-    #eon{ 
-        border-radius: 200px;
+    .eon{ 
+        border-radius: 270px;
+       
     }
-    .song-media img { width: 150px; height: auto; object-fit: cover; }
+    .song-media img {border-radius: 270px; object-fit: cover; }
     
     .listen-btn {
       display: inline-block;
