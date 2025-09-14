@@ -20,21 +20,4 @@
             });
         });
 
-        // JavaScript for form submission (simulated)
-        const contactForm = document.getElementById('contact-form');
-        const formMessage = document.getElementById('form-message');
-
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            // Simulate form submission success
-            formMessage.textContent = 'Thank you for your message! We will get back to you soon.';
-            formMessage.classList.remove('hidden');
-            formMessage.classList.add('text-green-600', 'font-semibold');
-
-            // Reset the form after a short delay
-            setTimeout(() => {
-                contactForm.reset();
-                formMessage.classList.add('hidden');
-            }, 5000);
-        });
+      
