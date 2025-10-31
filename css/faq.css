@@ -1,0 +1,27 @@
+ body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            transition: background-color 0.3s ease;
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .accordion-content.expanded {
+            max-height: 500px;
+            /* Adjust based on expected content length */
+            transition: max-height 0.3s ease-in;
+        }
+
+        .rotate-90 {
+            transform: rotate(90deg);
+        }
+
+        .transition-transform {
+            transition-property: transform;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-in-out;
+        }
