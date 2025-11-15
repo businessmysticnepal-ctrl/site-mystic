@@ -1,166 +1,179 @@
-  /* Custom styles for a cleaner look not handled by Tailwind */
-        body {
-            font-family: 'Inter', sans-serif;
-            @apply bg-gray-100 text-gray-800;
-            overflow-x: hidden; /* Prevents horizontal scroll on smaller screens */
-        }
-        .bg-hero-gradient {
-            background-image: linear-gradient(to right, #6A11CB, #2575FC);
-        }
-        .service-card {
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            @apply hover:transform hover:-translate-y-2 hover:shadow-2xl;
-        }
-        /* Style for the testimonial slider */
-        .testimonial-container {
-            scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch;
-        }
-        .testimonial-card {
-            scroll-snap-align: start;
-        }
-        .contact {
-    background-color: var(--bg-color-dark);
-    color: var(--text-color-dark);
+/* Add smooth scrolling to the entire site */
+html {
+    scroll-behavior: smooth;
 }
 
-.contact h1 {
-    color: var(--text-color-dark);
+/* Base body styles */
+body {
+    font-family: 'Inter', sans-serif;
+    @apply bg-gray-100 text-gray-800;
+    overflow-x: hidden;
 }
 
-.contact form {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 30px;
-    background-color: #2a2a2a;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+/* --- Hero Video Section --- */
+#hero {
+    position: relative;
+    overflow: hidden;
 }
 
-.form-group {
-    margin-bottom: 20px;
-    text-align: left;
+#hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translateX(-50%) translateY(-50%);
+    object-fit: cover;
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 1rem;
-    color: #fff;
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */
+    z-index: 1;
 }
 
-.form-group input {
+/* --- Card and Button Enhancements --- */
+.service-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease;
+    border-color: #e5e7eb; /* Default border */
+}
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-color: #6a11cb; /* Accent color border on hover */
+}
+
+.cta-button {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+.cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Infinite Logo Carousel Section --- */
+.logo-slider {
+    background: white;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
+    height: 120px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.logo-slider::before,
+.logo-slider::after {
+    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 15%;
+    z-index: 2;
+}
+.logo-slider::before {
+    left: 0;
+    top: 0;
+}
+.logo-slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+.logo-slide-track {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(160px * 20); /* Adjust width based on number of logos: (logo_width * (2 * number_of_logos)) */
+}
+
+.logo-slider:hover .logo-slide-track {
+    animation-play-state: paused;
+}
+
+.slide {
+    height: 100px;
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    perspective: 100px;
+}
+.slide img {
+    height: 80px;
+    width: auto;
+    transition: transform 0.3s ease;
+    filter: grayscale(1);
+    opacity: 0.8;
+}
+.slide img:hover {
+    transform: translateZ(10px);
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+/* This is the div you asked not to touch */
+.eon img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-160px * 10)); /* (logo_width * number_of_logos) */
+    }
+}
+
+/* --- Native Contact Form Styling --- */
+.form-input {
     width: 100%;
     padding: 12px;
-    border: none;
-    border-radius: 5px;
-    background-color: #444;
-    color: #fff;
+    border-radius: 8px;
+    background-color: #f3f4f6;
+    color: #111827;
     font-size: 1rem;
+    border: 2px solid transparent;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+.form-input:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.3);
 }
 
-.contact button {
-    width: 100%;
-    padding: 15px;
-    background-color: var(--accent-color);
-    color: var(--text-color-dark);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.1rem;
-    transition: background-color 0.3s;
-}
-
-.contact button:hover {
-    background-color: #0056b3;
-}
-
+/* Original scroll container for safety, though it is now replaced */
 .scroll-container {
       overflow-x: auto;
       overflow-y: hidden;
       white-space: nowrap;
       padding: 2rem;
-     
-    }
-    .scroll-container::-webkit-scrollbar {
-      height: 10px;
-    }
-    .scroll-container::-webkit-scrollbar-thumb {
-      background: #fbc02d;
-    
-    }
-    
-    .song-card {
-      display: inline-block;
-      vertical-align: top;
-      border-radius: 10px;
-      overflow: hidden;
-     
-      margin-right: 1rem;
-      width: 160px;
-      transition: transform 0.3s, ;
-    }
-    .song-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 30px red
-    }
-
-    .eon{ 
-        border-radius: 270px;
-       
-    }
-    .song-media img {border-radius: 270px; object-fit: cover; }
-    
-    .listen-btn {
-      display: inline-block;
-      margin-top: 1rem;
-      background: white;
-      
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-
-    body {
-  font-family: 'Inter', sans-serif;
+}
+.scroll-container::-webkit-scrollbar {
+    height: 10px;
+}
+.scroll-container::-webkit-scrollbar-thumb {
+    background: #fbc02d;
 }
 
-.faq-list {
-  max-width: 800px;
-  margin: 0 auto;
+.song-card {
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 1rem;
+    width: 160px;
+    transition: transform 0.3s;
 }
-
-.faq-item {
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-
-.faq-question {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #1a202c;
-}
-
-.faq-answer {
-  margin-top: 10px;
-  color: #4a5568;
-}
-
-.see-more-btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background: linear-gradient(to right, #2575fc, #6a11cb);
-  color: #fff;
-  font-weight: bold;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: opacity 0.3s ease;
-}
-
-.see-more-btn:hover {
-  opacity: 0.9;
+.song-card:hover {
+    transform: translateY(-8px);
 }
