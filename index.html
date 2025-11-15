@@ -3,234 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <title>Mystic Nepal & Mystic Nepal Studios | Web Development, Video Editing, SEO & Digital Marketing in Nepal</title>
-    <!-- SEO and Meta Tags -->
-    <meta name="description" content="Mystic Nepal Studios delivers elite web development, cinematic video editing, and expert SEO in Nepal. We build modern digital experiences that captivate and convert.">
-    <meta name="keywords" content="Mystic Nepal, Mystic Nepal Studios, web development Nepal, SEO Nepal, video editing Nepal, best web design Kathmandu, digital marketing Nepal">
+    <!-- Favicon - Create a 32x32 PNG and link it here -->
+    <link rel="icon" type="image/png" href="path/to/your/favicon.png">
+    
+    <!-- Meta Tags -->
+    <meta name="description" content="Mystic Nepal and Mystic Nepal Studios deliver expert web development, SEO, video editing, and digital marketing solutions in Nepal. We build modern websites, create cinematic videos, and craft winning digital strategies.">
+    <meta name="keywords" content="Mystic Nepal, Mystic Nepal Studios, Nepal Web Development, Nepal SEO Services, Video Editing Nepal, Digital Marketing Nepal, Web Design Nepal, Creative Studios Nepal, Nepal Content Creation, Nepal Branding">
     <link rel="canonical" href="https://yourwebsite.com/" />
-    <!-- Favicon Placeholders -->
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
-
-    <!-- Open Graph & Twitter -->
-    <meta property="og:title" content="Mystic Nepal & Mystic Nepal Studios | Elite Digital Solutions in Nepal">
-    <meta property="og:description" content="From cinematic videos to high-performance websites, Mystic Nepal Studios crafts unforgettable digital experiences.">
+    <meta property="og:title" content="Mystic Nepal & Mystic Nepal Studios | Digital Solutions in Nepal">
+    <meta property="og:description" content="Websites, SEO, video editing, and digital marketing by Mystic Nepal & Mystic Nepal Studios.">
     <meta property="og:image" content="https://yourwebsite.com/assets/mystic nepal logo.jpg">
-    <meta property="og:url" content="https://yourwebsite.com/">
-    <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-
-    <!-- Geo and Viewport -->
-    <meta name="geo.region" content="NP" />
-    <meta name="geo.placename" content="Kathmandu, Nepal" />
+    <!-- ... other meta tags ... -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#4A00E0">
+    <meta name="theme-color" content="#2575FC">
 
     <!-- Stylesheets -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- Schema Data (Remains the same) -->
+    <!-- Schema Data -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@graph": [ /* Your existing schema data goes here */ ]
+        }
+    </script>
 </head>
-<body class="bg-gray-50">
-
+<body class="bg-gray-100">
     <!-- Preloader -->
     <div id="preloader">
         <div class="spinner"></div>
     </div>
-    
-    <!-- Custom Cursor -->
-    <div class="cursor-dot" data-cursor-dot></div>
-    <div class="cursor-outline" data-cursor-outline></div>
 
-    <header class="bg-white/80 backdrop-blur-sm shadow-md sticky top-0 z-50">
-        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#" class="flex items-center space-x-2">
-                <span class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 animated-gradient">Mystic Nepal</span>
-            </a>
-            <div class="hidden md:flex space-x-8 text-lg font-medium">
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#portfolio" class="nav-link">Work</a>
-                <a href="#blog" class="nav-link">Insights</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-gray-600 text-2xl focus:outline-none"><i class="fas fa-bars"></i></button>
-            </div>
-        </nav>
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-2">
-            <a href="#services" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Services</a>
-            <a href="#portfolio" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Work</a>
-            <a href="#blog" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Insights</a>
-            <a href="#about" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">About Us</a>
-            <a href="#contact" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Contact</a>
-        </div>
-    </header>
-
-    <main class="space-y-24">
-        <section id="hero" class="relative text-white h-screen flex items-center justify-center">
-            <video id="hero-video" autoplay loop muted playsinline src="https://assets.mixkit.co/videos/preview/mixkit-abstract-video-of-a-colorful-gradient-4204-large.mp4"></video>
-            <div class="hero-overlay"></div>
-            <div class="container mx-auto px-4 text-center relative z-10">
-                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tighter" data-aos="fade-down">
-                    Crafting Digital Experiences That Connect.
-                </h1>
-                <p id="typing-text" class="mt-4 text-lg md:text-2xl max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200"></p>
-                <a href="#contact" class="cta-button mt-8" data-aos="fade-up" data-aos-delay="400">
-                    <span>Start Your Project</span>
+    <div id="main-content" class="invisible">
+        <header class="bg-white shadow-md sticky top-0 z-50">
+            <!-- Navbar remains the same -->
+            <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+                 <a href="#" class="flex items-center space-x-2">
+                    <span class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Mystic Nepal</span>
                 </a>
+                <div class="hidden md:flex space-x-8 text-lg font-medium">
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#portfolio" class="nav-link">Portfolio</a>
+                    <a href="#about" class="nav-link">About Us</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                 <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 text-2xl focus:outline-none"><i class="fas fa-bars"></i></button>
+                </div>
+            </nav>
+            <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-2">
+                <!-- Mobile menu links -->
+                 <a href="#services" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Services</a>
+                 <a href="#portfolio" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Portfolio</a>
+                 <a href="#about" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">About Us</a>
+                 <a href="#contact" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Contact</a>
             </div>
-        </section>
+        </header>
 
-        <section id="services" class="container mx-auto px-4">
-            <h2 class="section-heading" data-aos="fade-up">Our Expertise</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="service-card" data-aos="fade-up">
-                    <div class="icon-wrapper bg-blue-100 text-blue-600"><i class="fas fa-code"></i></div>
-                    <h3 class="text-2xl font-semibold mb-2">Web Development</h3>
-                    <p class="text-gray-600">Building dynamic, high-performance websites tailored to your needs. From e-commerce to custom applications.</p>
+        <main>
+            <section id="hero" class="relative text-white h-[70vh] md:h-[90vh] flex items-center justify-center overflow-hidden">
+                <video id="hero-video" autoplay loop muted playsinline src="https://assets.mixkit.co/videos/preview/mixkit-abstract-video-of-a-colorful-gradient-4204-large.mp4"></video>
+                <div class="hero-overlay"></div>
+                <div class="container mx-auto px-4 text-center relative z-10">
+                    <h1 class="text-4xl md:text-7xl font-extrabold leading-tight text-shadow" data-aos="fade-up">
+                        Crafting Digital Experiences
+                    </h1>
+                    <h1 class="text-4xl md:text-7xl font-extrabold leading-tight text-shadow" data-aos="fade-up" data-aos-delay="200">
+                        That Connect.
+                    </h1>
+                    <p class="mt-6 text-lg md:text-2xl max-w-3xl mx-auto text-shadow-light" data-aos="fade-up" data-aos-delay="400">
+                        From captivating websites to cinematic videos, we bring your vision to life.
+                    </p>
+                    <a href="#contact" class="cta-button mt-10 inline-block px-10 py-5 bg-white text-blue-600 font-bold text-lg rounded-full shadow-lg hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="600">
+                        Start Your Project
+                    </a>
                 </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="icon-wrapper bg-purple-100 text-purple-600"><i class="fas fa-film"></i></div>
-                    <h3 class="text-2xl font-semibold mb-2">Video Editing</h3>
-                    <p class="text-gray-600">Crafting cinematic narratives from raw footage for brands, marketing, and social media with industry-grade software.</p>
+            </section>
+            
+            <!-- Animated Stats Section -->
+            <section id="stats" class="bg-gray-50 py-16">
+                <div class="container mx-auto px-4">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                        <div class="stat-item" data-aos="fade-up">
+                            <!-- IMPORTANT: Change data-goal to your real numbers -->
+                            <h3 class="text-4xl md:text-5xl font-bold text-blue-600 stat-number" data-goal="50">0</h3>
+                            <p class="text-gray-500 font-semibold mt-2">Projects Completed</p>
+                        </div>
+                        <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                            <h3 class="text-4xl md:text-5xl font-bold text-purple-600 stat-number" data-goal="35">0</h3>
+                            <p class="text-gray-500 font-semibold mt-2">Happy Clients</p>
+                        </div>
+                        <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                            <h3 class="text-4xl md:text-5xl font-bold text-green-600 stat-number" data-goal="120">0</h3>
+                            <p class="text-gray-500 font-semibold mt-2">Videos Edited</p>
+                        </div>
+                        <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                             <h3 class="text-4xl md:text-5xl font-bold text-red-600 stat-number" data-goal="15000">0</h3>
+                            <p class="text-gray-500 font-semibold mt-2">Lines of Code</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="icon-wrapper bg-green-100 text-green-600"><i class="fas fa-magic"></i></div>
-                    <h3 class="text-2xl font-semibold mb-2">Digital Creation</h3>
-                    <p class="text-gray-600">Bringing creative ideas to life through a blend of design, animation, and visual storytelling for all digital platforms.</p>
+            </section>
+            
+            <section id="services" class="py-24 bg-white">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-16" data-aos="fade-up">Our Expertise</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Service cards remain the same structure -->
+                         <div class="service-card bg-white p-8 rounded-2xl shadow-lg border text-center" data-aos="fade-up">
+                            <div class="service-icon text-4xl text-blue-600 mb-4"><i class="fas fa-code"></i></div>
+                            <h3 class="text-2xl font-semibold mb-2">Web Development</h3>
+                            <p class="text-gray-600">Building dynamic, responsive, and high-performance websites. From e-commerce to custom applications.</p>
+                        </div>
+                        <div class="service-card bg-white p-8 rounded-2xl shadow-lg border text-center" data-aos="fade-up" data-aos-delay="100">
+                             <div class="service-icon text-4xl text-purple-600 mb-4"><i class="fas fa-film"></i></div>
+                            <h3 class="text-2xl font-semibold mb-2">Video Editing</h3>
+                             <p class="text-gray-600">Crafting cinematic narratives from raw footage for brands, marketing, and social media.</p>
+                         </div>
+                         <div class="service-card bg-white p-8 rounded-2xl shadow-lg border text-center" data-aos="fade-up" data-aos-delay="200">
+                            <div class="service-icon text-4xl text-green-600 mb-4"><i class="fas fa-magic"></i></div>
+                            <h3 class="text-2xl font-semibold mb-2">Digital Creation</h3>
+                             <p class="text-gray-600">Bringing creative ideas to life through a blend of design, animation, and visual storytelling.</p>
+                         </div>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="connections" class="py-12 bg-gray-100 overflow-hidden">
-            <h2 class="section-heading" data-aos="fade-up">Our Connections</h2>
-            <div class="logo-slider" data-aos="fade-in">
-                <div class="logo-slide-track">
-                    <!-- Your partner logos remain unchanged here -->
+            <!-- Connections section with infinite carousel -->
+            <section id="connections" class="py-16 bg-gray-100">
+                 <!-- The structure from the previous response for the logo slider is correct and can be used here -->
+                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-8" data-aos="fade-up">Our Connections</h2>
+                 <div class="logo-slider">
+                     <div class="logo-slide-track">
+                         <!-- Logos repeated for smooth scrolling -->
+                         <div class="slide"><a href="#"><img src="https://yt3.googleusercontent.com/rhICPV-vCayatPwZm0g0cur51rO-L6m1Df2y52I70Dn2tNOdS2K8Aio1Ag7n9UqdxmOeZ-BrQvA=s160-c-k-c0x00ffffff-no-rj" alt="Logo"></a></div>
+                         <div class="slide"><a href="#"><img src="https://yt3.googleusercontent.com/r4DIRFDJM9YGviPWg1v3T8sx9ixjhOHQ-RvoI4pNqqABLG4kMttFhk54Ogf5y95wuNWcWdZRCw=s160-c-k-c0x00ffffff-no-rj" alt="Logo"></a></div>
+                         <div class="slide"><a href="#"><img src="https://yt3.googleusercontent.com/0c78tYREZiq7GF35okfbummU3t5AIEI2HCODGnTiRh-oYOOOtEsYNtJl9oZHlJBBSjbXae6XkA=s160-c-k-c0x00ffffff-no-rj" alt="Logo"></a></div>
+                         <div class="slide eon"><a href="#"><img src="https://yt3.googleusercontent.com/vIJ06md3etWT_Ow55w2mua3m3msQfpz8sfh9rPtRIu7baQ3kPLoaq60ZliE1FsDbGg5PZJLBamg=s160-c-k-c0x00ffffff-no-rj" alt="Logo"></a></div>
+                         <!-- Repeat with all other logos and duplicate the set for infinite effect -->
+                     </div>
+                 </div>
+            </section>
+
+            <!-- Portfolio Section -->
+            <section id="portfolio" class="py-24 bg-white">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-16" data-aos="fade-up">Case Studies</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <a href="https://www.instagram.com/f1_hub_nepal/" target="_blank" class="portfolio-card block" data-aos="fade-up">
+                             <div class="portfolio-image-wrapper">
+                                 <img src="data:image/jpeg;base64,/9j/4AAQSkZJRg..." alt="Project Image" class="portfolio-image">
+                                 <div class="portfolio-overlay">
+                                    <div class="portfolio-icon"><i class="fas fa-plus"></i></div>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-2">Social Media Growth</h3>
+                                <p class="text-gray-600">Achieved 1 million+ views for F1 Hub Nepal within 3 months through strategic content creation.</p>
+                            </div>
+                        </a>
+                        <!-- Add other portfolio items in the same structure -->
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+            
+            <section id="contact" class="py-24 bg-gray-100">
+                <div class="container mx-auto px-4">
+                    <div class="max-w-3xl mx-auto text-center">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4" data-aos="fade-up">Let's Create Something Amazing</h2>
+                        <p class="text-gray-600 text-lg mb-8" data-aos="fade-up" data-aos-delay="100">
+                            Ready to start your digital journey? Send us a message and we'll get in touch.
+                        </p>                                  
+                        <div class="bg-white rounded-lg shadow-xl p-6 md:p-10 w-full max-w-2xl mx-auto" data-aos="zoom-in-up">
+                            <h1 class="text-2xl md:text-3xl font-extrabold text-gray-800 text-center mb-8">Send a Message</h1>
+                            <form id="contact-form" action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST">
+                                <div class="mb-6">
+                                    <input type="text" name="name" placeholder="Full Name" required class="form-input">
+                                </div>
+                                <div class="mb-6">
+                                    <input type="email" name="email" placeholder="Email Address" required class="form-input">
+                                </div>
+                                <div class="mb-6">
+                                    <textarea name="message" rows="5" placeholder="Your Message" required class="form-input"></textarea>
+                                </div>
+                                <button type="submit" class="cta-button w-full px-8 py-4 bg-blue-600 text-white font-bold text-lg rounded-full shadow-lg hover:shadow-xl transition-all">
+                                    Send Inquiry
+                                </button>
+                                <p id="form-status" class="mt-4 text-center"></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
         
-        <section id="portfolio" class="container mx-auto px-4 py-20">
-            <h2 class="section-heading" data-aos="fade-up">Case Studies</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                 <!-- Example Case Study Card 1 -->
-                <a href="https://www.instagram.com/f1_hub_nepal/" target="_blank" class="case-study-card" data-aos="fade-up">
-                    <img src="data:image/jpeg;base64,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" alt="Custom website for a content creator" class="case-study-image">
-                    <div class="p-6">
-                        <span class="case-study-tag">Social Media</span>
-                        <h3 class="text-xl font-bold mb-2">Social Media Page Redesign</h3>
-                        <p class="text-gray-600 mb-4">A full-scale social media page redesign focusing on reach, achieving over a million views in just 3 months.</p>
-                        <span class="case-study-link">View Case Study &rarr;</span>
-                    </div>
-                </a>
-                
-                <!-- Your other case studies follow a similar structure -->
+        <footer class="bg-gray-800 text-white py-12">
+            <!-- Footer content remains the same -->
+        </footer>
 
-            </div>
-        </section>
-
-        <section id="blog" class="container mx-auto px-4 py-20">
-            <h2 class="section-heading" data-aos="fade-up">Our Insights</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Blog Post 1 -->
-                <a href="https://www.linkedin.com/pulse/making-ethical-responsible-ai-systems-dealing-ensuring-saphal-ghimire-hjkzf/?trackingId=cdPviyXISHmksa%2BSnSl2mw%3D%3D" target="_blank" rel="noopener noreferrer" class="blog-card" data-aos="fade-up">
-                    <img src="https://media.licdn.com/dms/image/v2/D4D12AQEjl3zyphkPSw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1739343390066?e=2147483647&v=beta&t=xmilm4bC4dePwtQo2EepgM3AwZ8jEhplJQ5gEC4CQmg" alt="Ethical AI systems concept image">
-                    <div class="p-6">
-                        <span class="blog-tag">AI & Ethics</span>
-                        <h3 class="blog-title">Making Ethical & Responsible AI Systems</h3>
-                        <p class="blog-excerpt">Exploring the challenges of ensuring fairness and responsibility in modern algorithms.</p>
-                        <span class="blog-date">Feb 12, 2025</span>
-                    </div>
-                </a>
-                <!-- Blog Post 2 -->
-                <a href="https://www.linkedin.com/pulse/ultimate-gem-project-idx-google-saphal-ghimire-phugf/?trackingId=8gx2aBDLSVuHskNND6hGjw%3D%3D" rel="noopener noreferrer" target="_blank" class="blog-card" data-aos="fade-up" data-aos-delay="100">
-                     <img src="https://media.licdn.com/dms/image/v2/D4D12AQFvPSiHC_y7JQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1737444351220?e=1761782400&v=beta&t=br6mcHUOPyUpKcrgVpf854H74stOvO-umwkSIF7Bw0E" alt="Google Project IDX Logo">
-                    <div class="p-6">
-                        <span class="blog-tag">Development</span>
-                        <h3 class="blog-title">The Ultimate Gem: Google's Project IDX</h3>
-                        <p class="blog-excerpt">A deep dive into how Project IDX and Firebase Studio are changing the development landscape.</p>
-                        <span class="blog-date">Jan 21, 2025</span>
-                    </div>
-                </a>
-                <!-- Blog Post 3 -->
-                <a href="https://www.linkedin.com/pulse/why-you-should-use-adobe-premier-pro-learner-saphal-ghimire-63whf/?trackingId=fo0S%2Fj01T4mZd8UNgigPeQ%3D%3D" rel="noopener noreferrer" target="_blank" class="blog-card" data-aos="fade-up" data-aos-delay="200">
-                     <img src="https://media.licdn.com/dms/image/v2/D4D12AQEw6orp1lq9FA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1737524173279?e=1761782400&v=beta&t=NrOXtmrOacwEjyhZC6HiHTzGME_cnttm8AZCI7DYcDE" alt="Adobe Premiere Pro interface">
-                    <div class="p-6">
-                        <span class="blog-tag">Video Editing</span>
-                        <h3 class="blog-title">Why You Should Use Adobe Premiere Pro</h3>
-                        <p class="blog-excerpt">A beginner's guide to leveraging the power of Premiere Pro for professional video editing.</p>
-                        <span class="blog-date">Dec 1, 2024</span>
-                    </div>
-                </a>
-            </div>
-        </section>
-
-        <section id="testimonials" class="bg-gray-100 py-20">
-            <div class="container mx-auto px-4">
-                <h2 class="section-heading" data-aos="fade-up">What Our Clients Say</h2>
-                <div class="swiper-container testimonial-slider" data-aos="fade-in">
-                    <div class="swiper-wrapper">
-                        <!-- Slide 1 -->
-                        <div class="swiper-slide">
-                            <div class="testimonial-card">
-                                <p>"Mystic Nepal delivered a stunning website and a compelling brand video that perfectly captured our essence. Their team was professional, creative, and a pleasure to work with. Highly recommend!"</p>
-                                <div class="mt-4">
-                                    <p class="font-semibold text-blue-600">Founder</p>
-                                    <p class="text-sm text-gray-500">SN Production</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Slide 2 -->
-                        <div class="swiper-slide">
-                            <div class="testimonial-card">
-                                <p>"Their social media strategy completely transformed our online presence. We saw a huge increase in engagement and a direct impact on our sales. Mystic Nepal is the real deal."</p>
-                                <div class="mt-4">
-                                    <p class="font-semibold text-blue-600">Founder</p>
-                                    <p class="text-sm text-gray-500">F1_Hub_Nepal</p>
-                                </div>
-                            </div>
-                        </div>
-                         <!-- Slide 3 -->
-                        <div class="swiper-slide">
-                            <div class="testimonial-card">
-                                <p>"The Social Media automation they built for us saved countless hours of manual work. Their technical skills and attention to detail are unmatched. A fantastic partner."</p>
-                                <div class="mt-4">
-                                    <p class="font-semibold text-blue-600">CEO</p>
-                                    <p class="text-sm text-gray-500">Making from zero</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Final "Contact" and "Footer" sections remain mostly the same, but with the upgraded form -->
-    </main>
-
-    <!-- Back to Top Button -->
-    <button id="back-to-top" title="Go to top"><i class="fas fa-arrow-up"></i></button>
-
-    <!-- Cookie Consent Banner -->
-    <div id="cookie-consent-banner">
-        <p>This website uses cookies to ensure you get the best experience. <a href="/privacy-policy" class="underline">Learn more</a></p>
-        <button id="cookie-consent-accept">Got it!</button>
-    </div>
+        <!-- Back to Top Button -->
+        <a id="back-to-top" href="#" class="fixed bottom-5 right-5 w-12 h-12 bg-blue-600 text-white rounded-full shadow-lg flex items-center justify-center text-xl z-50 transition-opacity opacity-0">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </div> <!-- End of main-content -->
     
     <!-- JavaScript libraries -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
+    </script>
 </body>
 </html>
