@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Mystic Nepal & Mystic Nepal Studios | Web Development, Video Editing, SEO & Digital Marketing in Nepal</title>
-    <!-- Favicon - Create a 32x32 PNG and link it here -->
-    <link rel="icon" type="image/png" href="path/to/your/favicon.png">
-    
-    <!-- Meta Tags -->
     <meta name="description" content="Mystic Nepal and Mystic Nepal Studios deliver expert web development, SEO, video editing, and digital marketing solutions in Nepal. We build modern websites, create cinematic videos, and craft winning digital strategies.">
     <meta name="keywords" content="Mystic Nepal, Mystic Nepal Studios, Nepal Web Development, Nepal SEO Services, Video Editing Nepal, Digital Marketing Nepal, Web Design Nepal, Creative Studios Nepal, Nepal Content Creation, Nepal Branding">
     <link rel="canonical" href="https://yourwebsite.com/" />
     <meta property="og:title" content="Mystic Nepal & Mystic Nepal Studios | Digital Solutions in Nepal">
     <meta property="og:description" content="Websites, SEO, video editing, and digital marketing by Mystic Nepal & Mystic Nepal Studios.">
     <meta property="og:image" content="https://yourwebsite.com/assets/mystic nepal logo.jpg">
+    <meta property="og:url" content="https://yourwebsite.com/">
+    <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <!-- ... other meta tags ... -->
+    <meta name="twitter:title" content="Mystic Nepal & Mystic Nepal Studios | Web Development & SEO in Nepal">
+    <meta name="twitter:description" content="Mystic Nepal and Mystic Nepal Studios help brands grow with SEO, video editing, and digital marketing.">
+    <meta name="twitter:image" content="https://yourwebsite.com/assets/mystic nepal logo.jpg">
+    <meta name="geo.region" content="NP" />
+    <meta name="geo.placename" content="Kathmandu, Nepal" />
+    <meta name="geo.position" content="27.7172;85.3240" />
+    <meta name="ICBM" content="27.7172, 85.3240" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#2575FC">
 
@@ -23,7 +27,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
@@ -31,196 +35,231 @@
     <script type="application/ld+json">
         {
           "@context": "https://schema.org",
-          "@graph": [ /* Your existing schema data goes here */ ]
+          "@graph": [
+            {
+              "@type": "Organization",
+              "name": "Mystic Nepal Studios",
+              "url": "https://yourwebsite.com",
+              "logo": "https://yourwebsite.com/assets/mystic nepal logo.jpg",
+              "sameAs": ["https://www.facebook.com/yourpage", "https://www.instagram.com/yourpage", "https://www.youtube.com/yourpage"],
+              "description": "Mystic Nepal Studios offers web development, SEO, video editing, and digital marketing in Nepal."
+            },
+            {
+              "@type": "Organization",
+              "name": "Mystic Nepal",
+              "url": "https://yourwebsite.com",
+              "logo": "https://yourwebsite.com/assets/mystic nepal logo.jpg",
+              "description": "Mystic Nepal provides creative web design, SEO optimization, video editing, and digital solutions in Nepal."
+            },
+            {
+              "@type": "LocalBusiness",
+              "name": "Mystic Nepal Studios",
+              "image": "https://yourwebsite.com/assets/mystic nepal logo.jpg",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Your Street Address",
+                "addressLocality": "Kathmandu",
+                "addressRegion": "Bagmati",
+                "postalCode": "44600",
+                "addressCountry": "NP"
+              },
+              "telephone": "+977-123456789",
+              "priceRange": "$$"
+            },
+            {
+              "@type": "WebSite",
+              "url": "https://yourwebsite.com/",
+              "name": "Mystic Nepal & Mystic Nepal Studios",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://yourwebsite.com/?s={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": [
+                {"@type": "Question","name": "What is Mystic Nepal Studios?","acceptedAnswer": {"@type": "Answer","text": "Mystic Nepal Studios is a digital agency based in Nepal specializing in web development, video editing, SEO, and digital marketing services."}},
+                {"@type": "Question","name": "Does Mystic Nepal provide SEO services?","acceptedAnswer": {"@type": "Answer","text": "Yes, Mystic Nepal offers professional SEO services to help businesses in Nepal improve their search engine rankings and grow online visibility."}},
+                {"@type": "Question","name": "Where is Mystic Nepal Studios located?","acceptedAnswer": {"@type": "Answer","text": "Mystic Nepal Studios is located in Kathmandu, Nepal and works with clients both locally and internationally."}},
+                {"@type": "Question","name": "What services does Mystic Nepal offer?","acceptedAnswer": {"@type": "Answer","text": "Mystic Nepal and Mystic Nepal Studios offer web design, SEO, video editing, digital marketing, content creation, and branding services."}},
+                {"@type": "Question","name": "How can I start a project with Mystic Nepal Studios?","acceptedAnswer": {"@type": "Answer","text": "You can contact Mystic Nepal Studios through the contact form on the website or via email/phone to start your project."}}
+              ]
+            }
+          ]
         }
     </script>
 </head>
-<body class="bg-gray-100">
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="spinner"></div>
-    </div>
-
-    <div id="main-content" class="invisible">
-        <header class="bg-white shadow-md sticky top-0 z-50">
-            <!-- Navbar remains the same -->
-            <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-                 <a href="#" class="flex items-center space-x-2">
-                    <span class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Mystic Nepal</span>
-                </a>
-                <div class="hidden md:flex space-x-8 text-lg font-medium">
-                    <a href="#services" class="nav-link">Services</a>
-                    <a href="#portfolio" class="nav-link">Portfolio</a>
-                    <a href="#about" class="nav-link">About Us</a>
-                    <a href="#contact" class="nav-link">Contact</a>
-                </div>
-                 <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-600 text-2xl focus:outline-none"><i class="fas fa-bars"></i></button>
-                </div>
-            </nav>
-            <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-2">
-                <!-- Mobile menu links -->
-                 <a href="#services" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Services</a>
-                 <a href="#portfolio" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Portfolio</a>
-                 <a href="#about" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">About Us</a>
-                 <a href="#contact" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Contact</a>
+<body class="bg-gray-50">
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <span class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Mystic Nepal</span>
+            </a>
+            <div class="hidden md:flex space-x-8 text-lg font-medium">
+                <a href="#services" class="text-gray-600 hover:text-blue-600 transition-colors">Services</a>
+                <a href="#portfolio" class="text-gray-600 hover:text-blue-600 transition-colors">Portfolio</a>
+                <a href="#blog" class="text-gray-600 hover:text-blue-600 transition-colors">Blog</a>
+                <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors">About Us</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
             </div>
-        </header>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-600 text-2xl focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-2">
+            <a href="#services" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Services</a>
+            <a href="#portfolio" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Portfolio</a>
+            <a href="#blog" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Blog</a>
+            <a href="#about" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">About Us</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Contact</a>
+        </div>
+    </header>
 
-        <main>
-            <section id="hero" class="relative text-white h-[70vh] md:h-[90vh] flex items-center justify-center overflow-hidden">
-                <video id="hero-video" autoplay loop muted playsinline src="https://assets.mixkit.co/videos/preview/mixkit-abstract-video-of-a-colorful-gradient-4204-large.mp4"></video>
-                <div class="hero-overlay"></div>
-                <div class="container mx-auto px-4 text-center relative z-10">
-                    <h1 class="text-4xl md:text-7xl font-extrabold leading-tight text-shadow" data-aos="fade-up">
-                        Crafting Digital Experiences
-                    </h1>
-                    <h1 class="text-4xl md:text-7xl font-extrabold leading-tight text-shadow" data-aos="fade-up" data-aos-delay="200">
-                        That Connect.
-                    </h1>
-                    <p class="mt-6 text-lg md:text-2xl max-w-3xl mx-auto text-shadow-light" data-aos="fade-up" data-aos-delay="400">
-                        From captivating websites to cinematic videos, we bring your vision to life.
-                    </p>
-                    <a href="#contact" class="cta-button mt-10 inline-block px-10 py-5 bg-white text-blue-600 font-bold text-lg rounded-full shadow-lg hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="600">
-                        Start Your Project
-                    </a>
-                </div>
-            </section>
-            
-            <!-- Animated Stats Section -->
-            <section id="stats" class="bg-gray-50 py-16">
-                <div class="container mx-auto px-4">
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                        <div class="stat-item" data-aos="fade-up">
-                            <!-- IMPORTANT: Change data-goal to your real numbers -->
-                            <h3 class="text-4xl md:text-5xl font-bold text-blue-600 stat-number" data-goal="50">0</h3>
-                            <p class="text-gray-500 font-semibold mt-2">Projects Completed</p>
-                        </div>
-                        <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
-                            <h3 class="text-4xl md:text-5xl font-bold text-purple-600 stat-number" data-goal="35">0</h3>
-                            <p class="text-gray-500 font-semibold mt-2">Happy Clients</p>
-                        </div>
-                        <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
-                            <h3 class="text-4xl md:text-5xl font-bold text-green-600 stat-number" data-goal="120">0</h3>
-                            <p class="text-gray-500 font-semibold mt-2">Videos Edited</p>
-                        </div>
-                        <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
-                             <h3 class="text-4xl md:text-5xl font-bold text-red-600 stat-number" data-goal="15000">0</h3>
-                            <p class="text-gray-500 font-semibold mt-2">Lines of Code</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <section id="services" class="py-24 bg-white">
-                <div class="container mx-auto px-4">
-                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-16" data-aos="fade-up">Our Expertise</h2>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <!-- Service cards remain the same structure -->
-                         <div class="service-card bg-white p-8 rounded-2xl shadow-lg border text-center" data-aos="fade-up">
-                            <div class="service-icon text-4xl text-blue-600 mb-4"><i class="fas fa-code"></i></div>
-                            <h3 class="text-2xl font-semibold mb-2">Web Development</h3>
-                            <p class="text-gray-600">Building dynamic, responsive, and high-performance websites. From e-commerce to custom applications.</p>
-                        </div>
-                        <div class="service-card bg-white p-8 rounded-2xl shadow-lg border text-center" data-aos="fade-up" data-aos-delay="100">
-                             <div class="service-icon text-4xl text-purple-600 mb-4"><i class="fas fa-film"></i></div>
-                            <h3 class="text-2xl font-semibold mb-2">Video Editing</h3>
-                             <p class="text-gray-600">Crafting cinematic narratives from raw footage for brands, marketing, and social media.</p>
-                         </div>
-                         <div class="service-card bg-white p-8 rounded-2xl shadow-lg border text-center" data-aos="fade-up" data-aos-delay="200">
-                            <div class="service-icon text-4xl text-green-600 mb-4"><i class="fas fa-magic"></i></div>
-                            <h3 class="text-2xl font-semibold mb-2">Digital Creation</h3>
-                             <p class="text-gray-600">Bringing creative ideas to life through a blend of design, animation, and visual storytelling.</p>
-                         </div>
-                    </div>
-                </div>
-            </section>
+    <main class="space-y-24">
+        <section id="hero" class="relative text-white h-[60vh] md:h-[80vh] flex items-center justify-center">
+            <!-- IMPORTANT: Replace this video source with your own video file -->
+            <video id="hero-video" autoplay loop muted playsinline src="https://assets.mixkit.co/videos/preview/mixkit-abstract-video-of-a-colorful-gradient-4204-large.mp4"></video>
+            <div class="hero-overlay"></div>
+            <div class="container mx-auto px-4 text-center relative z-10">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight" data-aos="fade-down">
+                    Crafting Digital Experiences That Connect.
+                </h1>
+                <p class="mt-4 text-lg md:text-2xl max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    From captivating websites to cinematic videos, we bring your vision to life.
+                </p>
+                <a href="#contact" class="cta-button mt-8 inline-block px-8 py-4 bg-white text-blue-600 font-bold text-lg rounded-full shadow-lg hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="400">
+                    Start Your Project
+                </a>
+            </div>
+        </section>
 
-            <!-- Connections section with infinite carousel -->
-            <section id="connections" class="py-16 bg-gray-100">
-                 <!-- The structure from the previous response for the logo slider is correct and can be used here -->
-                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-8" data-aos="fade-up">Our Connections</h2>
-                 <div class="logo-slider">
-                     <div class="logo-slide-track">
-                         <!-- Logos repeated for smooth scrolling -->
-                         <div class="slide"><a href="#"><img src="https://yt3.googleusercontent.com/rhICPV-vCayatPwZm0g0cur51rO-L6m1Df2y52I70Dn2tNOdS2K8Aio1Ag7n9UqdxmOeZ-BrQvA=s160-c-k-c0x00ffffff-no-rj" alt="Logo"></a></div>
-                         <div class="slide"><a href="#"><img src="https://yt3.googleusercontent.com/r4DIRFDJM9YGviPWg1v3T8sx9ixjhOHQ-RvoI4pNqqABLG4kMttFhk54Ogf5y95wuNWcWdZRCw=s160-c-k-c0x00ffffff-no-rj" alt="Logo"></a></div>
-                         <div class="slide"><a href="#"><img src="https://yt3.googleusercontent.com/0c78tYREZiq7GF35okfbummU3t5AIEI2HCODGnTiRh-oYOOOtEsYNtJl9oZHlJBBSjbXae6XkA=s160-c-k-c0x00ffffff-no-rj" alt="Logo"></a></div>
-                         <div class="slide eon"><a href="#"><img src="https://yt3.googleusercontent.com/vIJ06md3etWT_Ow55w2mua3m3msQfpz8sfh9rPtRIu7baQ3kPLoaq60ZliE1FsDbGg5PZJLBamg=s160-c-k-c0x00ffffff-no-rj" alt="Logo"></a></div>
-                         <!-- Repeat with all other logos and duplicate the set for infinite effect -->
-                     </div>
-                 </div>
-            </section>
-
-            <!-- Portfolio Section -->
-            <section id="portfolio" class="py-24 bg-white">
-                <div class="container mx-auto px-4">
-                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-16" data-aos="fade-up">Case Studies</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <a href="https://www.instagram.com/f1_hub_nepal/" target="_blank" class="portfolio-card block" data-aos="fade-up">
-                             <div class="portfolio-image-wrapper">
-                                 <img src="data:image/jpeg;base64,/9j/4AAQSkZJRg..." alt="Project Image" class="portfolio-image">
-                                 <div class="portfolio-overlay">
-                                    <div class="portfolio-icon"><i class="fas fa-plus"></i></div>
-                                </div>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-semibold mb-2">Social Media Growth</h3>
-                                <p class="text-gray-600">Achieved 1 million+ views for F1 Hub Nepal within 3 months through strategic content creation.</p>
-                            </div>
-                        </a>
-                        <!-- Add other portfolio items in the same structure -->
-                    </div>
+        <section id="services" class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-aos="fade-up">Our Services</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card bg-white p-8 rounded-2xl shadow-lg border border-gray-200 text-center" data-aos="fade-up">
+                    <div class="text-4xl text-blue-600 mb-4"><i class="fas fa-code"></i></div>
+                    <h3 class="text-2xl font-semibold mb-2">Web Development</h3>
+                    <p class="text-gray-600">Building dynamic, responsive, and high-performance websites tailored to your needs. From e-commerce to custom applications.</p>
                 </div>
-            </section>
-            
-            <section id="contact" class="py-24 bg-gray-100">
-                <div class="container mx-auto px-4">
-                    <div class="max-w-3xl mx-auto text-center">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-4" data-aos="fade-up">Let's Create Something Amazing</h2>
-                        <p class="text-gray-600 text-lg mb-8" data-aos="fade-up" data-aos-delay="100">
-                            Ready to start your digital journey? Send us a message and we'll get in touch.
-                        </p>                                  
-                        <div class="bg-white rounded-lg shadow-xl p-6 md:p-10 w-full max-w-2xl mx-auto" data-aos="zoom-in-up">
-                            <h1 class="text-2xl md:text-3xl font-extrabold text-gray-800 text-center mb-8">Send a Message</h1>
-                            <form id="contact-form" action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST">
-                                <div class="mb-6">
-                                    <input type="text" name="name" placeholder="Full Name" required class="form-input">
-                                </div>
-                                <div class="mb-6">
-                                    <input type="email" name="email" placeholder="Email Address" required class="form-input">
-                                </div>
-                                <div class="mb-6">
-                                    <textarea name="message" rows="5" placeholder="Your Message" required class="form-input"></textarea>
-                                </div>
-                                <button type="submit" class="cta-button w-full px-8 py-4 bg-blue-600 text-white font-bold text-lg rounded-full shadow-lg hover:shadow-xl transition-all">
-                                    Send Inquiry
-                                </button>
-                                <p id="form-status" class="mt-4 text-center"></p>
-                            </form>
+                <div class="service-card bg-white p-8 rounded-2xl shadow-lg border border-gray-200 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl text-purple-600 mb-4"><i class="fas fa-film"></i></div>
+                    <h3 class="text-2xl font-semibold mb-2">Video Editing</h3>
+                    <p class="text-gray-600">Crafting compelling narratives from raw footage, creating cinematic experiences for brands, marketing, and social media. We often use industry grade softwares like premier pro and after effects</p>
+                </div>
+                <div class="service-card bg-white p-8 rounded-2xl shadow-lg border border-gray-200 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl text-green-600 mb-4"><i class="fas fa-magic"></i></div>
+                    <h3 class="text-2xl font-semibold mb-2">Digital Creation</h3>
+                    <p class="text-gray-600">Bringing creative ideas to life through a blend of design, animation, and visual storytelling for all digital platforms.</p>
+                </div>
+                <div class="service-card bg-white p-8 rounded-2xl shadow-lg border border-gray-200 text-center" data-aos="fade-up">
+                    <div class="text-4xl text-yellow-600 mb-4"><i class="fas fa-robot"></i></div>
+                    <h3 class="text-2xl font-semibold mb-2">Python & Web Dev</h3>
+                    <p class="text-gray-600">Developing robust backend systems, automation scripts, and powerful web applications using the Python ecosystem.</p>
+                </div>
+                <div class="service-card bg-white p-8 rounded-2xl shadow-lg border border-gray-200 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl text-red-600 mb-4"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="text-2xl font-semibold mb-2">Social Media Strategy</h3>
+                    <p class="text-gray-600">Designing data-driven social media plans to grow your brand, engage your audience, and drive measurable results.</p>
+                </div>
+                <div class="service-card bg-white p-8 rounded-2xl shadow-lg border border-gray-200 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl text-indigo-600 mb-4"><i class="fas fa-bullhorn"></i></div>
+                    <h3 class="text-2xl font-semibold mb-2">Digital Manager</h3>
+                    <p class="text-gray-600">Overseeing your digital presence to ensure consistent branding, effective campaigns, and streamlined online operations.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="connections" class="py-12 bg-gray-100">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8" data-aos="fade-up">Our Connections</h2>
+            <div class="logo-slider">
+                <div class="logo-slide-track">
+                    <!-- Original Logos -->
+                    <div class="slide"><a href="https://www.youtube.com/@INDepthStory" target="_blank"><img src="https://yt3.googleusercontent.com/rhICPV-vCayatPwZm0g0cur51rO-L6m1Df2y52I70Dn2tNOdS2K8Aio1Ag7n9UqdxmOeZ-BrQvA=s160-c-k-c0x00ffffff-no-rj" alt="In Depth Story Logo"></a></div>
+                    <div class="slide"><a href="https://www.youtube.com/@TheNepaliComment" target="_blank"><img src="https://yt3.googleusercontent.com/r4DIRFDJM9YGviPWg1v3T8sx9ixjhOHQ-RvoI4pNqqABLG4kMttFhk54Ogf5y95wuNWcWdZRCw=s160-c-k-c0x00ffffff-no-rj" alt="The Nepali Comment Logo"></a></div>
+                    <div class="slide"><a href="https://www.youtube.com/@MisguidedNepal"target="_blank"><img src="https://yt3.googleusercontent.com/0c78tYREZiq7GF35okfbummU3t5AIEI2HCODGnTiRh-oYOOOtEsYNtJl9oZHlJBBSjbXae6XkA=s160-c-k-c0x00ffffff-no-rj" alt="Misguided Nepal Logo"></a></div>
+                    <div class="slide eon"><a href="https://www.youtube.com/@eon_nepal"target="_blank"><img src="https://yt3.googleusercontent.com/vIJ06md3etWT_Ow55w2mua3m3msQfpz8sfh9rPtRIu7baQ3kPLoaq60ZliE1FsDbGg5PZJLBamg=s160-c-k-c0x00ffffff-no-rj" alt="EON Nepal Logo"></a></div>
+                    <div class="slide"><a href="https://www.youtube.com/@ProjectKura"target="_blank"><img src="https://yt3.googleusercontent.com/48McgyD0-nVwcjUWy65sdJUxY_J3ycb-s7dqHY4YRv03ZphhCDjwNToxzbUx4Gc1p6byynUPhQ=s160-c-k-c0x00ffffff-no-rj" alt="Project Kura Logo"></a></div>
+                    <div class="slide"><a href="https://www.nepsepapertrading.com/"target="_blank"><img src="https://www.nepsepapertrading.com/assets/images/logo.png" alt="Nepse Paper Trading Logo"></a></div>
+                    <div class="slide"><a href="https://www.youtube.com/@ThirdWorldNerd"target="_blank"><img src="https://yt3.googleusercontent.com/T8bcq2R1ixDEcCWUYi1GlR_lRCQrNgC1hnJ17nccU4h-ILAK1QZP2D0x7l7dSRwP42IH258jgic=s160-c-k-c0x00ffffff-no-rj" alt="Third World Nerd Logo"></a></div>
+                    <div class="slide"><a href="https://www.youtube.com/@SahatKasa"target="_blank"><img src="https://yt3.googleusercontent.com/EXqz41vSA5Aj5rA_rE9alKwMU3s520EO0-lxzY3UeQRMjW4drhlaawODzaz3mW_7BiuyOOnPyg=s160-c-k-c0x00ffffff-no-rj" alt="Sahat Kasa Logo"></a></div>
+                    <div class="slide"><a href="https://www.youtube.com/channel/UCf5Ms5Xcsk686s9VciRAhOQ"target="_blank"><img src="https://yt3.googleusercontent.com/wNPvFnInosJWFtwZRjNUsXb2lHx5h5grIMp3MuUgK8Tnz7HRErdvWX-rW-QPMwtSoImjaiz5cA=s160-c-k-c0x00ffffff-no-rj" alt="Partner Logo 9"></a></div>
+                    <div class="slide"><a href="https://www.youtube.com/@swikarcodes"target="_blank"><img src="https://yt3.googleusercontent.com/hZ8CIqRgB33vZrnqlsoEn_W-h7SGUXCVkEKmBnnN_dmknpdJAHyo1RnZEb6_weNTsWAFctaLNw=s160-c-k-c0x00ffffff-no-rj" alt="Swikar Codes Logo"></a></div>
+                    <!-- Duplicated Logos for infinite scroll -->
+                    <div class="slide"><a href="https://www.youtube.com/@INDepthStory" target="_blank"><img src="https://yt3.googleusercontent.com/rhICPV-vCayatPwZm0g0cur51rO-L6m1Df2y52I70Dn2tNOdS2K8Aio1Ag7n9UqdxmOeZ-BrQvA=s160-c-k-c0x00ffffff-no-rj" alt="In Depth Story Logo"></a></div>
+                    <div class="slide"><a href="https://www.youtube.com/@TheNepaliComment" target="_blank"><img src="https://yt3.googleusercontent.com/r4DIRFDJM9YGviPWg1v3T8sx9ixjhOHQ-RvoI4pNqqABLG4kMttFhk54Ogf5y95wuNWcWdZRCw=s160-c-k-c0x00ffffff-no-rj" alt="The Nepali Comment Logo"></a></div>
+                    <div class="slide"><a href="https://www.youtube.com/@MisguidedNepal"target="_blank"><img src="https://yt3.googleusercontent.com/0c78tYREZiq7GF35okfbummU3t5AIEI2HCODGnTiRh-oYOOOtEsYNtJl9oZHlJBBSjbXae6XkA=s160-c-k-c0x00ffffff-no-rj" alt="Misguided Nepal Logo"></a></div>
+                    <div class="slide eon"><a href="https://www.youtube.com/@eon_nepal"target="_blank"><img src="https://yt3.googleusercontent.com/vIJ06md3etWT_Ow55w2mua3m3msQfpz8sfh9rPtRIu7baQ3kPLoaq60ZliE1FsDbGg5PZJLBamg=s160-c-k-c0x00ffffff-no-rj" alt="EON Nepal Logo"></a></div>
+                    <div class="slide"><a href="https://www.youtube.com/@ProjectKura"target="_blank"><img src="https://yt3.googleusercontent.com/48McgyD0-nVwcjUWy65sdJUxY_J3ycb-s7dqHY4YRv03ZphhCDjwNToxzbUx4Gc1p6byynUPhQ=s160-c-k-c0x00ffffff-no-rj" alt="Project Kura Logo"></a></div>
+                    <div class="slide"><a href="https://www.nepsepapertrading.com/"target="_blank"><img src="https://www.nepsepapertrading.com/assets/images/logo.png" alt="Nepse Paper Trading Logo"></a></div>
+                    <div class="slide"><a href="https://www.youtube.com/@ThirdWorldNerd"target="_blank"><img src="https://yt3.googleusercontent.com/T8bcq2R1ixDEcCWUYi1GlR_lRCQrNgC1hnJ17nccU4h-ILAK1QZP2D0x7l7dSRwP42IH258jgic=s160-c-k-c0x00ffffff-no-rj" alt="Third World Nerd Logo"></a></div>
+                    <div class="slide"><a href="https://www.youtube.com/@SahatKasa"target="_blank"><img src="https://yt3.googleusercontent.com/EXqz41vSA5Aj5rA_rE9alKwMU3s520EO0-lxzY3UeQRMjW4drhlaawODzaz3mW_7BiuyOOnPyg=s160-c-k-c0x00ffffff-no-rj" alt="Sahat Kasa Logo"></a></div>
+                    <div class="slide"><a href="https://www.youtube.com/channel/UCf5Ms5Xcsk686s9VciRAhOQ"target="_blank"><img src="https://yt3.googleusercontent.com/wNPvFnInosJWFtwZRjNUsXb2lHx5h5grIMp3MuUgK8Tnz7HRErdvWX-rW-QPMwtSoImjaiz5cA=s160-c-k-c0x00ffffff-no-rj" alt="Partner Logo 9"></a></div>
+                    <div class="slide"><a href="https://www.youtube.com/@swikarcodes"target="_blank"><img src="https://yt3.googleusercontent.com/hZ8CIqRgB33vZrnqlsoEn_W-h7SGUXCVkEKmBnnN_dmknpdJAHyo1RnZEb6_weNTsWAFctaLNw=s160-c-k-c0x00ffffff-no-rj" alt="Swikar Codes Logo"></a></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Repeat sections for Portfolio, Blog, About, Testimonials, FAQ with 'data-aos' attributes as needed -->
+        <!-- For brevity, I'll just show the modification for the contact form -->
+
+        <section id="contact" class="container mx-auto px-4 py-20">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-aos="fade-up">Let's Create Something Amazing</h2>
+                <p class="text-gray-600 text-lg mb-8" data-aos="fade-up" data-aos-delay="100">
+                    Ready to start your digital journey? Fill out the form below and we'll get in touch with you shortly.
+                </p>                                  
+                <div class="bg-white rounded-lg shadow-xl p-6 md:p-10 w-full max-w-2xl mx-auto" data-aos="zoom-in-up">
+                    <h1 class="text-2xl md:text-3xl font-extrabold text-gray-800 text-center mb-6">Send us a Message</h1>
+                    <!-- IMPORTANT: Replace the action URL with your Formspree endpoint -->
+                    <form id="contact-form" action="https://formspree.io/f/your_form_id_here" method="POST">
+                        <div class="form-group mb-6">
+                            <label for="name" class="block text-left font-semibold text-gray-700 mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" required class="form-input">
                         </div>
-                    </div>
+                        <div class="form-group mb-6">
+                            <label for="email" class="block text-left font-semibold text-gray-700 mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" required class="form-input">
+                        </div>
+                        <div class="form-group mb-6">
+                            <label for="message" class="block text-left font-semibold text-gray-700 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" required class="form-input"></textarea>
+                        </div>
+                        <button type="submit" class="cta-button w-full px-8 py-4 bg-blue-600 text-white font-bold text-lg rounded-full shadow-lg hover:shadow-xl transition-all">
+                            Send Inquiry
+                        </button>
+                    </form>
                 </div>
-            </section>
-        </main>
-        
-        <footer class="bg-gray-800 text-white py-12">
-            <!-- Footer content remains the same -->
-        </footer>
+            </div>
+        </section>
 
-        <!-- Back to Top Button -->
-        <a id="back-to-top" href="#" class="fixed bottom-5 right-5 w-12 h-12 bg-blue-600 text-white rounded-full shadow-lg flex items-center justify-center text-xl z-50 transition-opacity opacity-0">
-            <i class="fas fa-arrow-up"></i>
-        </a>
-    </div> <!-- End of main-content -->
+    </main>
+    
+    <footer class="bg-gray-800 text-white py-12">
+        <!-- Footer content remains the same -->
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex flex-col sm:flex-row justify-center sm:justify-between items-center mb-6 border-b border-gray-700 pb-6">
+                <p class="text-2xl font-bold text-gray-300 mb-4 sm:mb-0">Mystic Nepal  <br>business.mystic.nepal@gmail.com </p>
+                <div class="flex space-x-6 text-2xl">
+                   <a href="https://mail.google.com/mail/u/0/#inbox?compose=new?view=cm&fs=1&to=business.mystic.nepal@gmail.com&su=Inquiry from your website" aria-label="Email via Gmail" class="text-gray-400 hover:text-red-500 transition-colors" target="_blank"><i class="fas fa-envelope"></i></a>                  
+                   <a href="https://www.instagram.com/sap_ghimire/" aria-label="Instagram" class="text-gray-400 hover:text-pink-500 transition-colors" target="_blank"><i class="fab fa-instagram"  ></i></a>
+                    <a href="https://www.linkedin.com/company/mysticnepal/" aria-label="LinkedIn" class="text-gray-400 hover:text-blue-700 transition-colors" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/@Mystic_Nepal" aria-label="YouTube" class="text-gray-400 hover:text-red-600 transition-colors" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <p class="text-gray-500">&copy; 2025 Mystic Nepal. All Rights Reserved.</p>
+        </div>
+    </footer>
     
     <!-- JavaScript libraries -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
     <script>
         AOS.init({
-            duration: 800,
-            once: true,
+            duration: 800, // animation duration in milliseconds
+            once: true,    // whether animation should happen only once - while scrolling down
         });
     </script>
 </body>
