@@ -3,374 +3,1186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mystic Nepal & Mystic Nepal Studios | Digital Excellence</title>
+    <title>Mystic Nepal Studios | Digital Excellence</title>
+    <meta name="description" content="Mystic Nepal Studios: Expert web development, cinematic video editing, SEO, and digital marketing strategies in Nepal.">
     
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Mystic Nepal Studios: Expert web development, cinematic video editing, SEO, and digital marketing strategies in Nepal. Transforming brands with digital innovation.">
-    <meta name="keywords" content="Mystic Nepal, Web Development Nepal, SEO Services, Video Editing, Digital Marketing, Creative Agency Kathmandu">
-    <meta property="og:title" content="Mystic Nepal Studios | Crafting Digital Experiences">
-    <meta property="og:description" content="We build modern websites, create cinematic videos, and craft winning digital strategies.">
-    <meta property="og:image" content="https://yourwebsite.com/assets/mystic nepal logo.jpg">
-    <meta property="og:type" content="website">
-    <meta name="theme-color" content="#2563EB">
-
-    <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Animations -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'] },
-                    colors: {
-                        brand: {
-                            blue: '#2563EB',
-                            purple: '#7C3AED',
-                            dark: '#111827'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
 
     <style>
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #f1f1f1; }
-        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-        /* Infinite Scroll Animation */
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(calc(-250px * 10)); } /* 10 is number of unique logos */
+        :root {
+            --navy: #0a0f1e;
+            --navy-mid: #0d1530;
+            --navy-light: #121d3e;
+            --green-dark: #1a3a2a;
+            --green: #2d6a4f;
+            --green-bright: #3d9970;
+            --accent: #f5c518;
+            --accent-orange: #e86c3a;
+            --white: #ffffff;
+            --gray-text: #94a3b8;
+            --gray-light: #e2e8f0;
+            --card-bg: #ffffff;
+            --font-display: 'Sora', sans-serif;
+            --font-body: 'DM Sans', sans-serif;
         }
-        .slider {
-            height: 120px;
-            margin: auto;
-            overflow: hidden;
-            position: relative;
-            width: 100%;
+
+        html { font-family: var(--font-body); }
+        body { background: var(--navy); color: var(--white); overflow-x: hidden; }
+
+        /* SCROLLBAR */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--navy); }
+        ::-webkit-scrollbar-thumb { background: var(--green); border-radius: 3px; }
+
+        /* NAV */
+        nav {
+            position: fixed; top: 0; left: 0; width: 100%; z-index: 100;
+            background: rgba(10,15,30,0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            padding: 0 5%;
+            display: flex; align-items: center; justify-content: space-between;
+            height: 70px;
         }
+        .nav-logo {
+            display: flex; align-items: center; gap: 10px;
+            text-decoration: none;
+        }
+        .nav-logo-icon {
+            width: 38px; height: 38px; border-radius: 50%;
+            background: linear-gradient(135deg, var(--green-bright), var(--accent));
+            display: flex; align-items: center; justify-content: center;
+            font-size: 16px; font-weight: 800; color: var(--navy); font-family: var(--font-display);
+        }
+        .nav-logo-text {
+            font-family: var(--font-display); font-weight: 700; font-size: 1.1rem;
+            color: var(--white); letter-spacing: -0.02em;
+        }
+        .nav-links { display: flex; align-items: center; gap: 36px; }
+        .nav-links a {
+            color: var(--gray-text); text-decoration: none; font-size: 0.85rem;
+            font-weight: 500; transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--white); }
+        .nav-cta {
+            background: var(--accent) !important; color: var(--navy) !important;
+            padding: 9px 22px; border-radius: 6px; font-weight: 700 !important;
+        }
+        .nav-cta:hover { background: #e8b200 !important; }
+        .nav-mobile-btn { display: none; background: none; border: none; color: var(--white); font-size: 1.4rem; cursor: pointer; }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh; padding-top: 70px;
+            display: grid; grid-template-columns: 1fr 1fr;
+            align-items: center; gap: 60px;
+            padding-left: 8%; padding-right: 6%;
+            background: var(--navy);
+            position: relative; overflow: hidden;
+        }
+        .hero::before {
+            content: ''; position: absolute; inset: 0;
+            background: radial-gradient(ellipse 70% 60% at 60% 50%, rgba(45,106,79,0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+            padding: 6px 14px; border-radius: 20px;
+            font-size: 0.78rem; color: var(--gray-text); margin-bottom: 20px;
+            font-family: var(--font-body);
+        }
+        .hero-badge span { color: var(--green-bright); font-weight: 600; }
+        .hero-title {
+            font-family: var(--font-display); font-size: clamp(2.4rem, 4vw, 3.6rem);
+            font-weight: 800; line-height: 1.08; letter-spacing: -0.03em;
+            margin-bottom: 20px; color: var(--white);
+        }
+        .hero-title .yellow { color: var(--accent); }
+        .hero-desc {
+            color: var(--gray-text); font-size: 0.95rem; line-height: 1.75;
+            max-width: 440px; margin-bottom: 36px;
+        }
+        .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+        .btn-primary {
+            background: var(--accent); color: var(--navy);
+            padding: 14px 28px; border-radius: 8px;
+            font-weight: 700; font-size: 0.9rem; text-decoration: none;
+            transition: all 0.2s; display: inline-block;
+            font-family: var(--font-display);
+        }
+        .btn-primary:hover { background: #e8b200; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(245,197,24,0.3); }
+        .btn-outline {
+            background: transparent; color: var(--white);
+            padding: 14px 28px; border-radius: 8px;
+            font-weight: 600; font-size: 0.9rem; text-decoration: none;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.2s; display: inline-block;
+        }
+        .btn-outline:hover { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.4); }
+
+        /* HERO STATS */
+        .hero-stats {
+            display: flex; gap: 32px; margin-top: 44px; padding-top: 32px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+        .stat-item {}
+        .stat-num { font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; color: var(--white); }
+        .stat-num span { color: var(--accent); }
+        .stat-label { font-size: 0.78rem; color: var(--gray-text); margin-top: 2px; }
+
+        /* HERO RIGHT - Image collage */
+        .hero-right {
+            position: relative; display: flex;
+            flex-direction: column; gap: 16px;
+        }
+        .hero-img-main {
+            width: 100%; border-radius: 16px; overflow: hidden;
+            height: 300px; position: relative;
+        }
+        .hero-img-main img { width: 100%; height: 100%; object-fit: cover; }
+        .hero-img-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(135deg, rgba(10,15,30,0.4) 0%, transparent 60%);
+        }
+        .hero-circuit {
+            position: absolute; top: 20px; right: 20px;
+            width: 120px; height: 120px; opacity: 0.15;
+            background-image: repeating-linear-gradient(0deg, var(--green-bright) 0, var(--green-bright) 1px, transparent 1px, transparent 20px),
+                              repeating-linear-gradient(90deg, var(--green-bright) 0, var(--green-bright) 1px, transparent 1px, transparent 20px);
+        }
+        .hero-floating-card {
+            background: rgba(255,255,255,0.06);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px; padding: 14px 18px;
+            display: flex; align-items: center; gap: 12px;
+            font-size: 0.82rem;
+        }
+        .hfc-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+        .hfc-label { color: var(--gray-text); font-size: 0.72rem; }
+        .hfc-value { color: var(--white); font-weight: 600; font-size: 0.85rem; }
+
+        /* TRUST STRIP */
+        .trust-strip {
+            background: rgba(255,255,255,0.02);
+            border-top: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding: 20px 8%;
+            display: flex; align-items: center; gap: 40px; overflow: hidden;
+        }
+        .trust-label { font-size: 0.75rem; color: var(--gray-text); white-space: nowrap; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; }
+        .trust-divider { width: 1px; height: 30px; background: rgba(255,255,255,0.1); flex-shrink: 0; }
+        .slider { flex: 1; overflow: hidden; position: relative; height: 60px; }
         .slider::before, .slider::after {
-            background: linear-gradient(to right, rgba(249,250,251,1) 0%, rgba(255,255,255,0) 100%);
-            content: "";
-            height: 120px;
-            position: absolute;
-            width: 100px;
-            z-index: 2;
+            content: ''; position: absolute; top: 0; height: 100%; width: 80px; z-index: 2;
         }
-        .slider::after {
-            right: 0;
-            top: 0;
-            transform: rotateZ(180deg);
+        .slider::before { left: 0; background: linear-gradient(to right, var(--navy), transparent); }
+        .slider::after { right: 0; background: linear-gradient(to left, var(--navy), transparent); }
+        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-160px * 10)); } }
+        .slide-track { display: flex; animation: scroll 25s linear infinite; width: calc(160px * 20); }
+        .slide { width: 160px; height: 60px; display: flex; align-items: center; justify-content: center; padding: 10px 20px; }
+        .slide img { max-height: 40px; max-width: 120px; object-fit: contain; brightness(0.7); transition: filter 0.3s; }
+        .slide:hover img { filter: grayscale(0%) brightness(1); }
+
+        /* SERVICES */
+        .services { padding: 100px 8%; background: #f8f9fc; }
+        .section-eyebrow {
+            display: flex; align-items: center; gap: 10px;
+            font-size: 0.78rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.1em; color: var(--green); margin-bottom: 12px;
         }
-        .slider::before { left: 0; top: 0; }
-        .slide-track {
-            animation: scroll 30s linear infinite;
-            display: flex;
-            width: calc(250px * 20); /* Double the logos */
+        .section-eyebrow::before { content: ''; width: 24px; height: 2px; background: var(--green); }
+        .section-title {
+            font-family: var(--font-display); font-size: clamp(1.8rem, 3vw, 2.6rem);
+            font-weight: 800; color: #0f172a; letter-spacing: -0.03em; margin-bottom: 16px;
         }
-        .slide {
-            height: 120px;
-            width: 250px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
+        .section-desc { color: #64748b; font-size: 0.95rem; max-width: 480px; line-height: 1.7; }
+
+        .services-header { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: end; margin-bottom: 60px; }
+        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+        .service-card {
+            background: var(--white); border-radius: 16px;
+            padding: 32px 28px; border: 1px solid #e8edf5;
+            transition: all 0.3s; cursor: pointer; position: relative; overflow: hidden;
         }
-        .slide img {
-            max-width: 100%;
-            max-height: 80px;
-            filter: grayscale(100%) opacity(0.7);
-            transition: all 0.3s ease;
-            object-fit: contain;
+        .service-card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+            background: linear-gradient(90deg, var(--green), var(--accent));
+            transform: scaleX(0); transform-origin: left; transition: transform 0.3s;
         }
-        .slide:hover img {
-            filter: grayscale(0%) opacity(1);
-            transform: scale(1.1);
+        .service-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(0,0,0,0.12); }
+        .service-card:hover::before { transform: scaleX(1); }
+        .service-img {
+            width: 100%; height: 160px; border-radius: 10px; overflow: hidden;
+            margin-bottom: 20px; background: #f1f5f9;
         }
-        
-        /* Glass Effect */
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255,255,255,0.3);
+        .service-img img { width: 100%; height: 100%; object-fit: cover; }
+        .service-img-placeholder {
+            width: 100%; height: 100%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 2.5rem;
+        }
+        .service-tag {
+            display: inline-block; background: #e8f5ef; color: var(--green);
+            font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.08em; padding: 4px 10px; border-radius: 4px;
+            margin-bottom: 12px;
+        }
+        .service-tag.orange { background: #fef0e8; color: var(--accent-orange); }
+        .service-tag.blue { background: #e8f0fe; color: #3b5bdb; }
+        .service-title { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: #0f172a; margin-bottom: 8px; }
+        .service-desc { color: #64748b; font-size: 0.85rem; line-height: 1.65; }
+        .service-link {
+            margin-top: 18px; display: inline-flex; align-items: center; gap: 6px;
+            color: var(--green); font-size: 0.82rem; font-weight: 600; text-decoration: none;
+            transition: gap 0.2s;
+        }
+        .service-link:hover { gap: 10px; }
+
+        /* WHY US - Green section */
+        .why-us {
+            padding: 100px 8%; background: var(--green-dark);
+            display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+        }
+        .why-left {}
+        .why-title { font-family: var(--font-display); font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 800; color: var(--white); line-height: 1.15; margin-bottom: 20px; letter-spacing: -0.03em; }
+        .why-desc { color: rgba(255,255,255,0.65); font-size: 0.95rem; line-height: 1.75; margin-bottom: 36px; }
+        .why-btns { display: flex; gap: 14px; }
+        .btn-green {
+            background: var(--green-bright); color: var(--white);
+            padding: 13px 28px; border-radius: 8px; font-weight: 700; font-size: 0.9rem;
+            text-decoration: none; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px;
+        }
+        .btn-green:hover { background: #4dab87; transform: translateY(-2px); }
+        .btn-ghost { color: rgba(255,255,255,0.7); font-size: 0.9rem; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; padding: 13px 0; }
+        .btn-ghost:hover { color: white; }
+
+        .why-features { display: flex; flex-direction: column; gap: 20px; }
+        .why-feature {
+            display: flex; align-items: flex-start; gap: 16px;
+            background: rgba(255,255,255,0.05); border-radius: 12px;
+            padding: 18px 20px; border: 1px solid rgba(255,255,255,0.07);
+        }
+        .wf-icon {
+            width: 44px; height: 44px; border-radius: 10px;
+            background: rgba(255,255,255,0.08); display: flex; align-items: center;
+            justify-content: center; font-size: 1.1rem; flex-shrink: 0;
+            color: var(--green-bright);
+        }
+        .wf-title { font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+        .wf-desc { font-size: 0.82rem; color: rgba(255,255,255,0.55); line-height: 1.6; }
+
+        /* TESTIMONIAL */
+        .testimonial-section {
+            padding: 100px 8%; background: #f8f9fc;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+        }
+        .testimonial-img {
+            border-radius: 20px; overflow: hidden; height: 420px;
+            position: relative;
+        }
+        .testimonial-img img { width: 100%; height: 100%; object-fit: cover; }
+        .testimonial-img-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(135deg, rgba(10,15,30,0.5) 0%, transparent 70%);
+        }
+        .testi-content {}
+        .testi-eyebrow { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--green); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .testi-eyebrow::before { content: ''; width: 24px; height: 2px; background: var(--green); }
+        .testi-title { font-family: var(--font-display); font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 800; color: #0f172a; margin-bottom: 12px; letter-spacing: -0.03em; }
+        .testi-subtitle { color: #64748b; font-size: 0.9rem; margin-bottom: 32px; }
+        .testi-card {
+            background: var(--white); border-radius: 16px; padding: 28px;
+            border: 1px solid #e8edf5; margin-bottom: 16px;
+        }
+        .testi-quote { font-size: 0.9rem; color: #334155; line-height: 1.7; margin-bottom: 18px; font-style: italic; }
+        .testi-author { display: flex; align-items: center; gap: 12px; }
+        .testi-avatar {
+            width: 42px; height: 42px; border-radius: 50%;
+            background: linear-gradient(135deg, var(--green), var(--accent));
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1rem; color: var(--navy); font-weight: 800;
+            font-family: var(--font-display);
+        }
+        .testi-name { font-weight: 700; font-size: 0.88rem; color: #0f172a; }
+        .testi-role { font-size: 0.75rem; color: #94a3b8; }
+        .testi-stars { color: var(--accent); font-size: 0.75rem; margin-bottom: 4px; }
+        .testi-list { display: flex; flex-direction: column; gap: 0; }
+        .testi-item {
+            display: flex; align-items: flex-start; gap: 12px;
+            padding: 14px 0; border-bottom: 1px solid #f1f5f9;
+        }
+        .testi-item:last-child { border-bottom: none; }
+        .testi-check { width: 22px; height: 22px; border-radius: 50%; background: #e8f5ef; display: flex; align-items: center; justify-content: center; color: var(--green); font-size: 0.7rem; flex-shrink: 0; margin-top: 2px; }
+        .testi-item-text { font-size: 0.88rem; color: #334155; line-height: 1.5; }
+        .testi-item-text strong { color: #0f172a; }
+
+        /* PROCESS */
+        .process-section {
+            padding: 100px 8%; background: var(--navy-mid);
+            position: relative; overflow: hidden;
+        }
+        .process-section::before {
+            content: ''; position: absolute;
+            top: -200px; right: -200px; width: 600px; height: 600px;
+            border-radius: 50%; border: 1px solid rgba(255,255,255,0.03);
+        }
+        .process-header { text-align: center; margin-bottom: 64px; }
+        .process-header .section-eyebrow { justify-content: center; color: var(--green-bright); }
+        .process-header .section-eyebrow::before { background: var(--green-bright); }
+        .process-header .section-title { color: var(--white); }
+        .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+        .process-step { text-align: center; position: relative; }
+        .process-step:not(:last-child)::after {
+            content: ''; position: absolute; top: 28px; left: calc(50% + 36px);
+            width: calc(100% - 72px); height: 1px;
+            border-top: 2px dashed rgba(255,255,255,0.1);
+        }
+        .process-num {
+            width: 56px; height: 56px; border-radius: 50%;
+            background: rgba(45,106,79,0.2); border: 2px solid rgba(45,106,79,0.5);
+            display: flex; align-items: center; justify-content: center;
+            font-family: var(--font-display); font-size: 1.1rem; font-weight: 800;
+            color: var(--green-bright); margin: 0 auto 20px;
+        }
+        .process-title { font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+        .process-desc { font-size: 0.82rem; color: var(--gray-text); line-height: 1.65; }
+
+        /* CONTACT */
+        .contact-section {
+            padding: 100px 8%; background: #0a0f1e;
+            position: relative; overflow: hidden;
+        }
+        .contact-section::before {
+            content: ''; position: absolute;
+            bottom: -200px; left: -200px; width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(45,106,79,0.15) 0%, transparent 70%);
+        }
+        .contact-section::after {
+            content: ''; position: absolute;
+            top: -200px; right: -100px; width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(245,197,24,0.05) 0%, transparent 70%);
+        }
+        .contact-grid {
+            display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px;
+            background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 24px; padding: 60px; position: relative; z-index: 1;
+        }
+        .contact-left {}
+        .contact-title { font-family: var(--font-display); font-size: clamp(1.8rem, 2.5vw, 2.4rem); font-weight: 800; color: var(--white); letter-spacing: -0.03em; margin-bottom: 16px; }
+        .contact-desc { color: var(--gray-text); font-size: 0.9rem; line-height: 1.75; margin-bottom: 36px; }
+        .contact-info { display: flex; flex-direction: column; gap: 16px; }
+        .contact-info-item { display: flex; align-items: center; gap: 14px; }
+        .ci-icon { width: 40px; height: 40px; border-radius: 10px; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; color: var(--green-bright); font-size: 0.9rem; }
+        .ci-text { font-size: 0.88rem; color: var(--gray-text); }
+        .contact-form { display: flex; flex-direction: column; gap: 20px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .form-group { display: flex; flex-direction: column; gap: 8px; }
+        .form-label { font-size: 0.78rem; font-weight: 600; color: var(--gray-text); text-transform: uppercase; letter-spacing: 0.05em; }
+        .form-input {
+            background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+            color: var(--white); padding: 13px 16px; border-radius: 8px; font-size: 0.9rem;
+            font-family: var(--font-body); transition: border-color 0.2s;
+            outline: none;
+        }
+        .form-input::placeholder { color: rgba(255,255,255,0.25); }
+        .form-input:focus { border-color: var(--green-bright); background: rgba(45,106,79,0.08); }
+        textarea.form-input { resize: vertical; min-height: 120px; }
+        .btn-submit {
+            background: linear-gradient(135deg, var(--green), var(--green-bright));
+            color: var(--white); padding: 15px; border: none; border-radius: 8px;
+            font-weight: 700; font-size: 0.95rem; cursor: pointer; font-family: var(--font-display);
+            transition: all 0.2s; letter-spacing: 0.02em;
+        }
+        .btn-submit:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(45,106,79,0.4); }
+
+        /* FOOTER */
+        footer {
+            background: #050810; padding: 64px 8% 32px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+        .footer-grid {
+            display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr;
+            gap: 48px; margin-bottom: 56px;
+        }
+        .footer-brand {}
+        .footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+        .footer-logo-text { font-family: var(--font-display); font-size: 1.15rem; font-weight: 800; color: var(--white); }
+        .footer-tagline { color: var(--gray-text); font-size: 0.85rem; line-height: 1.7; margin-bottom: 24px; }
+        .footer-socials { display: flex; gap: 12px; }
+        .social-btn {
+            width: 36px; height: 36px; border-radius: 8px;
+            background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08);
+            display: flex; align-items: center; justify-content: center;
+            color: var(--gray-text); font-size: 0.85rem; text-decoration: none;
+            transition: all 0.2s;
+        }
+        .social-btn:hover { background: var(--green); color: white; border-color: var(--green); }
+        .footer-col-title { font-family: var(--font-display); font-size: 0.85rem; font-weight: 700; color: var(--white); margin-bottom: 20px; }
+        .footer-links { display: flex; flex-direction: column; gap: 10px; }
+        .footer-links a { color: var(--gray-text); font-size: 0.83rem; text-decoration: none; transition: color 0.2s; }
+        .footer-links a:hover { color: var(--white); }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding-top: 24px; display: flex; justify-content: space-between; align-items: center;
+        }
+        .footer-copy { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
+        .footer-legal { display: flex; gap: 20px; }
+        .footer-legal a { font-size: 0.8rem; color: rgba(255,255,255,0.3); text-decoration: none; }
+        .footer-legal a:hover { color: rgba(255,255,255,0.6); }
+
+        /* SN NETWORK */
+        .sn-network {
+            padding: 100px 8%; background: var(--navy);
+            position: relative; overflow: hidden;
+        }
+        .sn-network::before {
+            content: ''; position: absolute; inset: 0;
+            background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(245,197,24,0.04) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .sn-top {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+            align-items: center; margin-bottom: 72px;
+        }
+        .sn-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(245,197,24,0.1); border: 1px solid rgba(245,197,24,0.25);
+            color: var(--accent); padding: 6px 14px; border-radius: 20px;
+            font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em;
+            text-transform: uppercase; margin-bottom: 18px;
+        }
+        .sn-title {
+            font-family: var(--font-display); font-size: clamp(2rem, 3.5vw, 3.2rem);
+            font-weight: 800; color: var(--white); line-height: 1.08;
+            letter-spacing: -0.03em; margin-bottom: 20px;
+        }
+        .sn-title .sn-highlight {
+            background: linear-gradient(135deg, var(--accent), #ff8c42);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .sn-desc {
+            color: var(--gray-text); font-size: 0.95rem; line-height: 1.78;
+            margin-bottom: 32px;
+        }
+        .sn-cta-group { display: flex; gap: 14px; align-items: center; }
+        .btn-sn {
+            background: var(--accent); color: var(--navy);
+            padding: 14px 30px; border-radius: 8px; font-weight: 800;
+            font-size: 0.9rem; text-decoration: none; font-family: var(--font-display);
+            transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px;
+        }
+        .btn-sn:hover { background: #e8b200; transform: translateY(-2px); box-shadow: 0 10px 30px rgba(245,197,24,0.3); }
+        .btn-sn-ghost {
+            color: var(--gray-text); font-size: 0.88rem; font-weight: 600;
+            text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+            transition: color 0.2s;
+        }
+        .btn-sn-ghost:hover { color: var(--white); }
+
+        /* Right side - visual */
+        .sn-visual {
+            position: relative; display: flex; flex-direction: column; gap: 14px;
+        }
+        .sn-visual-header {
+            background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px; padding: 20px 24px;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .sn-logo-area { display: flex; align-items: center; gap: 14px; }
+        .sn-logo-icon {
+            width: 52px; height: 52px; border-radius: 14px;
+            background: linear-gradient(135deg, var(--accent), #e87d20);
+            display: flex; align-items: center; justify-content: center;
+            font-family: var(--font-display); font-weight: 900; font-size: 1.2rem;
+            color: var(--navy); letter-spacing: -0.05em;
+        }
+        .sn-logo-name { font-family: var(--font-display); font-size: 1.3rem; font-weight: 800; color: var(--white); }
+        .sn-logo-sub { font-size: 0.75rem; color: var(--gray-text); margin-top: 2px; }
+        .sn-live-badge {
+            display: flex; align-items: center; gap: 6px;
+            background: rgba(61,153,112,0.15); border: 1px solid rgba(61,153,112,0.3);
+            color: var(--green-bright); font-size: 0.72rem; font-weight: 700;
+            padding: 6px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.06em;
+        }
+        .sn-live-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green-bright); animation: pulse 1.5s infinite; }
+        @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.3)} }
+
+        .sn-stats-row {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+        }
+        .sn-stat-card {
+            background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 12px; padding: 16px 18px; text-align: center;
+            transition: all 0.3s;
+        }
+        .sn-stat-card:hover { background: rgba(255,255,255,0.06); border-color: rgba(245,197,24,0.2); }
+        .sn-stat-val { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--white); }
+        .sn-stat-val span { color: var(--accent); }
+        .sn-stat-lbl { font-size: 0.72rem; color: var(--gray-text); margin-top: 3px; }
+
+        /* Creator cards grid */
+        .sn-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .sn-creator-card {
+            background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 16px; padding: 24px 22px;
+            transition: all 0.3s; position: relative; overflow: hidden;
+        }
+        .sn-creator-card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+            background: linear-gradient(90deg, var(--accent), transparent);
+            transform: scaleX(0); transform-origin: left; transition: transform 0.3s;
+        }
+        .sn-creator-card:hover { transform: translateY(-4px); border-color: rgba(245,197,24,0.2); background: rgba(255,255,255,0.05); }
+        .sn-creator-card:hover::before { transform: scaleX(1); }
+        .sn-card-icon {
+            width: 48px; height: 48px; border-radius: 12px; margin-bottom: 16px;
+            display: flex; align-items: center; justify-content: center; font-size: 1.3rem;
+        }
+        .sn-card-title { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+        .sn-card-desc { font-size: 0.82rem; color: var(--gray-text); line-height: 1.65; }
+        .sn-card-tag {
+            display: inline-block; margin-top: 14px;
+            background: rgba(245,197,24,0.1); color: var(--accent);
+            font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.08em; padding: 4px 10px; border-radius: 4px;
+        }
+
+        /* Zerodha comparison banner */
+        .sn-compare {
+            margin-top: 56px;
+            background: linear-gradient(135deg, rgba(245,197,24,0.08) 0%, rgba(232,108,58,0.06) 100%);
+            border: 1px solid rgba(245,197,24,0.15); border-radius: 20px;
+            padding: 40px 48px;
+            display: grid; grid-template-columns: 1fr auto 1fr; gap: 40px; align-items: center;
+        }
+        .sn-compare-side { }
+        .sn-compare-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gray-text); margin-bottom: 8px; }
+        .sn-compare-name { font-family: var(--font-display); font-size: 1.4rem; font-weight: 800; color: var(--white); margin-bottom: 6px; }
+        .sn-compare-desc { font-size: 0.82rem; color: var(--gray-text); line-height: 1.6; }
+        .sn-compare-divider {
+            display: flex; flex-direction: column; align-items: center; gap: 8px;
+        }
+        .sn-vs {
+            width: 50px; height: 50px; border-radius: 50%;
+            background: rgba(245,197,24,0.1); border: 2px solid rgba(245,197,24,0.3);
+            display: flex; align-items: center; justify-content: center;
+            font-family: var(--font-display); font-weight: 900; font-size: 0.9rem; color: var(--accent);
+        }
+        .sn-compare-arrow { color: var(--gray-text); font-size: 0.7rem; }
+
+        @media (max-width: 1024px) {
+            .sn-top { grid-template-columns: 1fr; gap: 48px; }
+            .sn-cards { grid-template-columns: repeat(2, 1fr); }
+            .sn-compare { grid-template-columns: 1fr; text-align: center; }
+            .sn-compare-divider { flex-direction: row; justify-content: center; }
+        }
+        @media (max-width: 768px) {
+            .sn-cards { grid-template-columns: 1fr; }
+            .sn-stats-row { grid-template-columns: repeat(3,1fr); }
+            .sn-compare { padding: 28px 24px; }
+        }
+
+        /* ANIMATIONS */
+        .fade-up { opacity: 0; transform: translateY(30px); animation: fadeUp 0.7s ease forwards; }
+        .fade-up-2 { animation-delay: 0.15s; }
+        .fade-up-3 { animation-delay: 0.3s; }
+        @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+        /* MOBILE */
+        @media (max-width: 1024px) {
+            .hero { grid-template-columns: 1fr; padding-top: 100px; text-align: center; }
+            .hero-right { display: none; }
+            .hero-btns { justify-content: center; }
+            .hero-stats { justify-content: center; }
+            .hero-desc { margin: 0 auto 36px; }
+            .services-header { grid-template-columns: 1fr; }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .why-us { grid-template-columns: 1fr; }
+            .testimonial-section { grid-template-columns: 1fr; }
+            .testimonial-img { display: none; }
+            .process-grid { grid-template-columns: repeat(2, 1fr); }
+            .contact-grid { grid-template-columns: 1fr; padding: 40px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav-mobile-btn { display: block; }
+            .services-grid { grid-template-columns: 1fr; }
+            .process-grid { grid-template-columns: 1fr 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .hero-stats { flex-wrap: wrap; gap: 20px; }
+            .trust-label { display: none; }
+            .trust-divider { display: none; }
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800 antialiased overflow-x-hidden">
+<body>
 
-    <!-- Header -->
-    <header class="fixed w-full top-0 z-50 transition-all duration-300 glass-nav shadow-sm">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="group flex items-center gap-2">
-                <!-- Optional: Add an actual logo image here if available -->
-                <span class="text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 tracking-tight group-hover:opacity-80 transition-opacity">
-                    Mystic Nepal
-                </span>
-            </a>
-            
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-gray-600">
-                <a href="#services" class="hover:text-blue-600 transition-colors">Services</a>
-                <a href="#portfolio" class="hover:text-blue-600 transition-colors">Portfolio</a>
-                <a href="#about" class="hover:text-blue-600 transition-colors">About</a>
-                <a href="#blog" class="hover:text-blue-600 transition-colors">Blog</a>
-                <a href="#contact" class="px-5 py-2.5 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-500/30">
-                    Get in Touch
-                </a>
-            </div>
-
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="md:hidden text-gray-700 text-2xl focus:outline-none">
-                <i class="fas fa-bars"></i>
-            </button>
-        </nav>
-
-        <!-- Mobile Menu Overlay -->
-        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-xl py-4 flex flex-col">
-            <a href="#services" class="px-6 py-3 text-gray-600 hover:bg-gray-50 hover:text-blue-600 font-medium">Services</a>
-            <a href="#portfolio" class="px-6 py-3 text-gray-600 hover:bg-gray-50 hover:text-blue-600 font-medium">Portfolio</a>
-            <a href="#about" class="px-6 py-3 text-gray-600 hover:bg-gray-50 hover:text-blue-600 font-medium">About</a>
-            <a href="#contact" class="px-6 py-3 text-blue-600 font-bold">Contact Us</a>
+    <!-- NAV -->
+    <nav>
+        <a href="#" class="nav-logo">
+            <div class="nav-logo-icon">MN</div>
+            <span class="nav-logo-text">Mystic Nepal</span>
+        </a>
+        <div class="nav-links">
+            <a href="#hero">Home</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#about">About</a>
+            <a href="#process">Process</a>
+            <a href="#sn-network" style="color:var(--accent);font-weight:700;">SN Network</a>
+            <a href="#contact">Activities</a>
+            <a href="#contact" class="nav-cta">Contact Us</a>
         </div>
-    </header>
+        <button class="nav-mobile-btn" onclick="document.querySelector('.nav-links').style.display = document.querySelector('.nav-links').style.display === 'flex' ? 'none' : 'flex'; document.querySelector('.nav-links').style.flexDirection = 'column'; document.querySelector('.nav-links').style.position = 'absolute'; document.querySelector('.nav-links').style.top = '70px'; document.querySelector('.nav-links').style.left = '0'; document.querySelector('.nav-links').style.width = '100%'; document.querySelector('.nav-links').style.background = 'var(--navy)'; document.querySelector('.nav-links').style.padding = '20px 8%';">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="hero" class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
-            <!-- Video Background -->
-            <video autoplay loop muted playsinline class="absolute w-full h-full object-cover">
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-abstract-video-of-a-colorful-gradient-4204-large.mp4" type="video/mp4">
-            </video>
-            <!-- Overlay -->
-            <div class="absolute inset-0 bg-gray-900/60 backdrop-blur-[2px]"></div>
-            
-            <!-- Content -->
-            <div class="relative z-10 container mx-auto px-6 text-center text-white">
-                <span class="inline-block py-1 px-3 rounded-full bg-white/10 border border-white/20 text-sm font-medium mb-6 backdrop-blur-md" data-aos="fade-down">
-                    🚀 Elevate Your Digital Presence
-                </span>
-                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 tracking-tight" data-aos="fade-up" data-aos-delay="100">
-                    Crafting Digital <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Experiences That Connect.</span>
-                </h1>
-                <p class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-10 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
-                    From high-performance websites to cinematic storytelling, we turn your vision into a digital reality that drives growth.
+    <!-- HERO -->
+    <section id="hero" class="hero">
+        <div class="hero-left">
+            <div class="hero-badge fade-up">
+                <span>★ 4.9/5 Rating</span> &nbsp; Trusted Digital Agency in Nepal
+            </div>
+            <h1 class="hero-title fade-up fade-up-2">
+                You Can Own Your<br>
+                Business & Consulting<br>
+                You Do <span class="yellow">Free</span>
+            </h1>
+            <p class="hero-desc fade-up fade-up-3">
+                Empowering brands across Nepal and beyond with high-performance web development, cinematic video editing, and data-driven digital strategies that drive real results.
+            </p>
+            <div class="hero-btns fade-up fade-up-3">
+                <a href="#contact" class="btn-primary">Start Project Now</a>
+                <a href="#portfolio" class="btn-outline">Invest Consult Online</a>
+            </div>
+            <div class="hero-stats fade-up fade-up-3">
+                <div class="stat-item">
+                    <div class="stat-num">30+<span>+</span></div>
+                    <div class="stat-label">Business Partners</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num">10+<span><!---k+---></span></div>
+                    <div class="stat-label">Consulting Sessions</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num">96<span>%</span></div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num">2<span>yr</span></div>
+                    <div class="stat-label">Human Resources</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="hero-img-main">
+                <img src="mystic.jpeg" alt="Mystic Nepal Digital Agency" />
+                <div class="hero-img-overlay"></div>
+                <div class="hero-circuit"></div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+                <div class="hero-floating-card">
+                    <div class="hfc-icon" style="background:rgba(61,153,112,0.15);color:var(--green-bright)"><i class="fas fa-code"></i></div>
+                    <div>
+                        <div class="hfc-label">Web Projects</div>
+                        <div class="hfc-value">30+ Completed</div>
+                    </div>
+                </div>
+                <div class="hero-floating-card">
+                    <div class="hfc-icon" style="background:rgba(245,197,24,0.12);color:var(--accent)"><i class="fas fa-film"></i></div>
+                    <div>
+                        <div class="hfc-label">Video Edits</div>
+                        <div class="hfc-value">20++ Delivered</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <div class="trust-strip">
+        <span class="trust-label">Trusted Partners</span>
+        <div class="trust-divider"></div>
+        <div class="slider">
+            <div class="slide-track">
+                <div class="slide"><a href="https://www.youtube.com/@INDepthStory" target="_blank"><img src="https://yt3.googleusercontent.com/rhICPV-vCayatPwZm0g0cur51rO-L6m1Df2y52I70Dn2tNOdS2K8Aio1Ag7n9UqdxmOeZ-BrQvA=s160-c-k-c0x00ffffff-no-rj" alt="In Depth Story"></a></div>
+                <div class="slide"><a href="https://www.youtube.com/@TheNepaliComment" target="_blank"><img src="https://yt3.googleusercontent.com/r4DIRFDJM9YGviPWg1v3T8sx9ixjhOHQ-RvoI4pNqqABLG4kMttFhk54Ogf5y95wuNWcWdZRCw=s160-c-k-c0x00ffffff-no-rj" alt="The Nepali Comment"></a></div>
+                <div class="slide"><a href="https://www.youtube.com/@MisguidedNepal" target="_blank"><img src="https://yt3.googleusercontent.com/0c78tYREZiq7GF35okfbummU3t5AIEI2HCODGnTiRh-oYOOOtEsYNtJl9oZHlJBBSjbXae6XkA=s160-c-k-c0x00ffffff-no-rj" alt="Misguided Nepal"></a></div>
+                <div class="slide"><a href="https://www.youtube.com/@eon_nepal" target="_blank"><img src="https://yt3.googleusercontent.com/vIJ06md3etWT_Ow55w2mua3m3msQfpz8sfh9rPtRIu7baQ3kPLoaq60ZliE1FsDbGg5PZJLBamg=s160-c-k-c0x00ffffff-no-rj" alt="EON Nepal"></a></div>
+                <div class="slide"><a href="https://www.youtube.com/@ProjectKura" target="_blank"><img src="https://yt3.googleusercontent.com/48McgyD0-nVwcjUWy65sdJUxY_J3ycb-s7dqHY4YRv03ZphhCDjwNToxzbUx4Gc1p6byynUPhQ=s160-c-k-c0x00ffffff-no-rj" alt="Project Kura"></a></div>
+                <!--<div class="slide"><a href="https://www.nepsepapertrading.com/" target="_blank"><img src="https://www.nepsepapertrading.com/assets/images/logo.png" alt="Nepse Paper Trading"></a></div>-->
+                <div class="slide"><a href="https://www.youtube.com/@ThirdWorldNerd" target="_blank"><img src="https://yt3.googleusercontent.com/T8bcq2R1ixDEcCWUYi1GlR_lRCQrNgC1hnJ17nccU4h-ILAK1QZP2D0x7l7dSRwP42IH258jgic=s160-c-k-c0x00ffffff-no-rj" alt="Third World Nerd"></a></div>
+                <div class="slide"><a href="https://www.youtube.com/@SahatKasa" target="_blank"><img src="https://yt3.googleusercontent.com/EXqz41vSA5Aj5rA_rE9alKwMU3s520EO0-lxzY3UeQRMjW4drhlaawODzaz3mW_7BiuyOOnPyg=s160-c-k-c0x00ffffff-no-rj" alt="Sahat Kasa"></a></div>
+                <div class="slide"><a href="https://www.youtube.com/@swikarcodes" target="_blank"><img src="https://yt3.googleusercontent.com/hZ8CIqRgB33vZrnqlsoEn_W-h7SGUXCVkEKmBnnN_dmknpdJAHyo1RnZEb6_weNTsWAFctaLNw=s160-c-k-c0x00ffffff-no-rj" alt="Swikar Codes"></a></div>
+                <div class="slide"><a href="https://www.youtube.com/channel/UCf5Ms5Xcsk686s9VciRAhOQ" target="_blank"><img src="https://yt3.googleusercontent.com/wNPvFnInosJWFtwZRjNUsXb2lHx5h5grIMp3MuUgK8Tnz7HRErdvWX-rW-QPMwtSoImjaiz5cA=s160-c-k-c0x00ffffff-no-rj" alt="Partner"></a></div>
+                <!-- Duplicate -->
+                <div class="slide"><a href="https://www.youtube.com/@INDepthStory" target="_blank"><img src="https://yt3.googleusercontent.com/rhICPV-vCayatPwZm0g0cur51rO-L6m1Df2y52I70Dn2tNOdS2K8Aio1Ag7n9UqdxmOeZ-BrQvA=s160-c-k-c0x00ffffff-no-rj" alt="In Depth Story"></a></div>
+                <div class="slide"><a href="https://www.youtube.com/@TheNepaliComment" target="_blank"><img src="https://yt3.googleusercontent.com/r4DIRFDJM9YGviPWg1v3T8sx9ixjhOHQ-RvoI4pNqqABLG4kMttFhk54Ogf5y95wuNWcWdZRCw=s160-c-k-c0x00ffffff-no-rj" alt="The Nepali Comment"></a></div>
+                <div class="slide"><a href="https://www.youtube.com/@MisguidedNepal" target="_blank"><img src="https://yt3.googleusercontent.com/0c78tYREZiq7GF35okfbummU3t5AIEI2HCODGnTiRh-oYOOOtEsYNtJl9oZHlJBBSjbXae6XkA=s160-c-k-c0x00ffffff-no-rj" alt="Misguided Nepal"></a></div>
+                <div class="slide"><a href="https://www.youtube.com/@eon_nepal" target="_blank"><img src="https://yt3.googleusercontent.com/vIJ06md3etWT_Ow55w2mua3m3msQfpz8sfh9rPtRIu7baQ3kPLoaq60ZliE1FsDbGg5PZJLBamg=s160-c-k-c0x00ffffff-no-rj" alt="EON Nepal"></a></div>
+                <div class="slide"><a href="https://www.youtube.com/@ProjectKura" target="_blank"><img src="https://yt3.googleusercontent.com/48McgyD0-nVwcjUWy65sdJUxY_J3ycb-s7dqHY4YRv03ZphhCDjwNToxzbUx4Gc1p6byynUPhQ=s160-c-k-c0x00ffffff-no-rj" alt="Project Kura"></a></div>
+               <!-- <div class="slide"><a href="https://www.nepsepapertrading.com/" target="_blank"><img src="https://instagram.fktm19-1.fna.fbcdn.net/v/t51.2885-19/485442643_1380219452979519_1828248497326178068_n.jpg?efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.fktm19-1.fna.fbcdn.net&_nc_cat=103&_nc_oc=Q6cZ2QHAweKV9T7o_nObzCtnRjvrevShavYwW5_ZKJ12RwoKek2NBmox9jkqZ1aNlWoTWbjfzYvEBzJvELmwz0BPjOyA&_nc_ohc=27jnmeu0uhAQ7kNvwEOfJYg&_nc_gid=D1_4bRo8gaWWeg8WXrrRmA&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_AfsolWVii_Nbr_kBJ7u5-SS_JScNnNll1IlozbHDlKnlrw&oe=699AE77F&_nc_sid=7a9f4b" alt="Nepse Paper Trading"></a></div>--->
+                <div class="slide"><a href="https://www.youtube.com/@ThirdWorldNerd" target="_blank"><img src="https://yt3.googleusercontent.com/T8bcq2R1ixDEcCWUYi1GlR_lRCQrNgC1hnJ17nccU4h-ILAK1QZP2D0x7l7dSRwP42IH258jgic=s160-c-k-c0x00ffffff-no-rj" alt="Third World Nerd"></a></div>
+                <div class="slide"><a href="https://www.youtube.com/@SahatKasa" target="_blank"><img src="https://yt3.googleusercontent.com/EXqz41vSA5Aj5rA_rE9alKwMU3s520EO0-lxzY3UeQRMjW4drhlaawODzaz3mW_7BiuyOOnPyg=s160-c-k-c0x00ffffff-no-rj" alt="Sahat Kasa"></a></div>
+                <div class="slide"><a href="https://www.youtube.com/@swikarcodes" target="_blank"><img src="https://yt3.googleusercontent.com/hZ8CIqRgB33vZrnqlsoEn_W-h7SGUXCVkEKmBnnN_dmknpdJAHyo1RnZEb6_weNTsWAFctaLNw=s160-c-k-c0x00ffffff-no-rj" alt="Swikar Codes"></a></div>
+                <div class="slide"><a href="https://www.youtube.com/channel/UCf5Ms5Xcsk686s9VciRAhOQ" target="_blank"><img src="https://yt3.googleusercontent.com/wNPvFnInosJWFtwZRjNUsXb2lHx5h5grIMp3MuUgK8Tnz7HRErdvWX-rW-QPMwtSoImjaiz5cA=s160-c-k-c0x00ffffff-no-rj" alt="Partner"></a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SERVICES -->
+    <section id="services" class="services">
+        <div class="services-header">
+            <div>
+                <div class="section-eyebrow">Your For The Commerce</div>
+                <h2 class="section-title">Expert Services For Your Business Growth</h2>
+            </div>
+            <div>
+                <p class="section-desc">We deliver comprehensive digital solutions tailored to businesses of all sizes — from startups to established brands across Nepal and beyond.</p>
+            </div>
+        </div>
+        <div class="services-grid" id="services-grid">
+            <div class="service-card">
+                <div class="service-img">
+                    <img src="https://www.nrsnepal.com/media/images/mngt-consulting-services.jpg" alt="Business Consulting">
+                </div>
+                <div class="service-tag">Strategy</div>
+                <h3 class="service-title">Creativity In Business for Consulting</h3>
+                <p class="service-desc">Strategic consulting that transforms your business vision into actionable digital plans with measurable outcomes.</p>
+                <a href="#contact" class="service-link">Read more <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <!--<div class="service-card">
+                <div class="service-img">
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&q=80" alt="Accounts & Finance">
+                </div>
+                <div class="service-tag orange">Finance</div>
+                <h3 class="service-title">Accounts & Trading Consultation</h3>
+                <p class="service-desc">Expert financial planning, NEPSE paper trading guidance, and budget management for digital business operations.</p>
+                <a href="#contact" class="service-link">Read more <i class="fas fa-arrow-right"></i></a>
+            </div>--->
+            <div class="service-card">
+                <div class="service-img">
+                    <img src="data:image/jpeg;base64,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" alt="Coaching">
+                </div>
+                <div class="service-tag blue">Coaching</div>
+                <h3 class="service-title">Transform Your Career Coding</h3>
+                <p class="service-desc">Hands-on mentorship in web development, Python automation, and digital content creation for aspiring creators.</p>
+                <a href="#contact" class="service-link">Read more <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="service-card">
+                <div class="service-img">
+                    <div class="service-img-placeholder" style="background:#f0fdf4">💻</div>
+                </div>
+                <div class="service-tag">Dev</div>
+                <h3 class="service-title">Web Development & Apps</h3>
+                <p class="service-desc">From landing pages to full-stack web applications — built fast, responsive, and optimized for conversions.</p>
+                <a href="#contact" class="service-link">Read more <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="service-card">
+                <div class="service-img">
+                    <div class="service-img-placeholder" style="background:#fffbeb">🎬</div>
+                </div>
+                <div class="service-tag orange">Video</div>
+                <h3 class="service-title">Cinematic Video Editing</h3>
+                <p class="service-desc">Premiere Pro and After Effects post-production that turns raw footage into compelling brand stories.</p>
+                <a href="#contact" class="service-link">Read more <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="service-card">
+                <div class="service-img">
+                    <div class="service-img-placeholder" style="background:#eff6ff">📈</div>
+                </div>
+                <div class="service-tag blue">Growth</div>
+                <h3 class="service-title">Social & Digital Strategy</h3>
+                <p class="service-desc">Data-driven social media growth plans, SEO, and digital management to expand your brand's online presence.</p>
+                <a href="#contact" class="service-link">Read more <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY US -->
+    <section id="about" class="why-us">
+        <div class="why-left">
+            <div class="section-eyebrow" style="color:var(--green-bright)">
+                <span style="display:inline-block;width:24px;height:2px;background:var(--green-bright);"></span>
+                Why Choose Mystic Nepal
+            </div>
+            <h2 class="why-title">
+                Promises For From To Turn<br>
+                To Your Far Promote Your<br>
+                Consultations
+            </h2>
+            <p class="why-desc">
+                We're not just a service provider — we're your long-term digital partner. Our team combines deep local market knowledge with international-standard execution to deliver results that matter.
+            </p>
+            <div class="why-btns">
+                <a href="#contact" class="btn-green"><i class="fas fa-rocket"></i> More Links</a>
+                <a href="#portfolio" class="btn-ghost"><i class="fas fa-play-circle"></i> Strategies</a>
+            </div>
+        </div>
+        <div class="why-features">
+            <div class="why-feature">
+                <div class="wf-icon"><i class="fas fa-check-circle"></i></div>
+                <div>
+                    <div class="wf-title">Great Reason</div>
+                    <p class="wf-desc">We understand Nepal's digital ecosystem and combine that with world-class execution. Every project is backed by strategy, creativity, and data.</p>
+                </div>
+            </div>
+            <div class="why-feature">
+                <div class="wf-icon"><i class="fas fa-users"></i></div>
+                <div>
+                    <div class="wf-title">Accountant Teams</div>
+                    <p class="wf-desc">International standards meet local market insights. Our team brings diverse skills ensuring every deliverable exceeds your expectations.</p>
+                </div>
+            </div>
+            <div class="why-feature">
+                <div class="wf-icon"><i class="fas fa-chart-bar"></i></div>
+                <div>
+                    <div class="wf-title">Business Maintenance</div>
+                    <p class="wf-desc">Ongoing support and maintenance means your digital presence evolves with market trends and never goes stale.</p>
+                </div>
+            </div>
+            <div class="why-feature">
+                <div class="wf-icon"><i class="fas fa-handshake"></i></div>
+                <div>
+                    <div class="wf-title">Trusted Interviews</div>
+                    <p class="wf-desc">Our transparent process keeps you informed at every step. Regular check-ins, clear reporting, and open communication build lasting trust.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIAL / ABOUT -->
+    <section id="portfolio" class="testimonial-section">
+        <div class="testimonial-img">
+            <img src="mystic.jpeg" alt="Team at work" />
+            <div class="testimonial-img-overlay"></div>
+        </div>
+        <div class="testi-content">
+            <div class="testi-eyebrow">New Your Evolution</div>
+            <h2 class="testi-title">Top Creators & Brands Trust Our Evolution</h2>
+            <p class="testi-subtitle">See what our partners say about working with Mystic Nepal Studios</p>
+            <div class="testi-card">
+                <div class="testi-stars">★★★★★</div>
+                <p class="testi-quote">"Mystic Nepal transformed our YouTube channel's visual identity completely. The editing quality and strategic approach to content helped us get 10k views within a week with their SEO and Optimization service."</p>
+                <div class="testi-author">
+                    <div class="testi-avatar">S</div>
+                    <div>
+                        <div class="testi-name">Saphal Ghimire</div>
+                        <div class="testi-role">Content Creator - THE EXPOSER, </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testi-list">
+                <div class="testi-item">
+                    <div class="testi-check"><i class="fas fa-check"></i></div>
+                    <div class="testi-item-text"><strong>Customizing Bana Benefits</strong> — Tailored digital strategies aligned with your specific brand voice and audience.</div>
+                </div>
+                <div class="testi-item">
+                    <div class="testi-check"><i class="fas fa-check"></i></div>
+                    <div class="testi-item-text"><strong>Ag Rast ane Fupa</strong> — Fast turnaround times with premium quality, because your deadlines matter to us.</div>
+                </div>
+                <div class="testi-item">
+                    <div class="testi-check"><i class="fas fa-check"></i></div>
+                    <div class="testi-item-text"><strong>Consistent Growth Results</strong> — Data-backed approaches that generate measurable improvements in reach and engagement.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="process-section">
+        <div class="process-header">
+            <div class="section-eyebrow">How We Work</div>
+            <h2 class="section-title" style="color:var(--white)">Our Simple 8-Step Process</h2>
+        </div>
+        <div class="process-grid">
+            <div class="process-step">
+                <div class="process-num">01</div>
+                <h3 class="process-title">Deep understanding & Observation</h3>
+                <p class="process-desc">We start by deeply understanding and observing your business goals, target audience, and competitive landscape.</p>
+            </div>
+            <div class="process-step">
+                <div class="process-num">02</div>
+                <h3 class="process-title">Deep Research & Analysis</h3>
+                <p class="process-desc">We start by deeply understanding and analyze your business goals, target audience, and competitive landscape.</p>
+            </div>
+            <div class="process-step">
+                <div class="process-num">03</div>
+                <h3 class="process-title">Discovery & Strategy</h3>
+                <p class="process-desc">We start by deeply understanding your business goals, target audience, competitive landscape, and making have strategic approach.</p>
+            </div>
+            <div class="process-step">
+                <div class="process-num">04</div>
+                <h3 class="process-title">Design & Planning</h3>
+                <p class="process-desc">Create detailed project roadmaps, wireframes, and creative concepts tailored to your vision.</p>
+            </div>
+            <div class="process-step">
+                <div class="process-num">05</div>
+                <h3 class="process-title">Designing Roadmaps</h3>
+                <p class="process-desc">We start by deeply understanding your business goals, target audience, competitive landscape, and making a proper roadmap for you..</p>
+            </div>
+            <div class="process-step">
+                <div class="process-num">06</div>
+                <h3 class="process-title">Build & Execute</h3>
+                <p class="process-desc">Our team executes with precision — developing, editing, and creating content that aligns perfectly.</p>
+            </div>
+            <div class="process-step">
+                <div class="process-num">07</div>
+                <h3 class="process-title">Launch & Optimize</h3>
+                <p class="process-desc">We launch your project, monitor performance, and continuously optimize for better results.</p>
+            </div>
+            <div class="process-step">
+                <div class="process-num">08</div>
+                <h3 class="process-title">After sale service</h3>
+                <p class="process-desc">We start by working on your business goals, target audience, competitive landscape even after sales solving your issues and giving you good service.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SN NETWORK -->
+    <section id="sn-network" class="sn-network">
+        <div class="sn-top">
+            <!-- LEFT -->
+            <div>
+                <div class="sn-badge"><i class="fas fa-network-wired"></i> &nbsp; Introducing SN Network</div>
+                <h2 class="sn-title">
+                    Nepal's First<br>
+                    <span class="sn-highlight">Creator Network</span><br>
+                    Built for Growth
+                </h2>
+                <p class="sn-desc">
+                    SN Network is Mystic Nepal's exclusive community of digital creators — think of it like <strong style="color:var(--white)"> Z+Connection</strong>, but built for Nepali YouTubers, podcasters, and content entrepreneurs. We bring creators together, share resources, provide tools, and help each other grow collectively.
                 </p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="300">
-                    <a href="#contact" class="px-8 py-4 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg shadow-lg hover:shadow-blue-500/50 transition-all transform hover:-translate-y-1">
-                        Start Your Project
-                    </a>
-                    <a href="#portfolio" class="px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold text-lg backdrop-blur-md transition-all">
-                        View Portfolio
-                    </a>
+                <p class="sn-desc" style="margin-top:-14px;">
+                    Whether you're just starting out or already have an audience — SN Network gives you access to collab opportunities, production support, brand deals, and a tight-knit creator community that has your back.
+                </p>
+                <div class="sn-cta-group">
+                    <a href="#contact" class="btn-sn"><i class="fas fa-user-plus"></i> Join the Network</a>
+                    <a href="#contact" class="btn-sn-ghost"><i class="fas fa-play-circle"></i> Learn how it works</a>
                 </div>
             </div>
-            
-            <!-- Scroll Indicator -->
-            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-white/50">
-                <i class="fas fa-chevron-down text-2xl"></i>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section id="services" class="py-24 bg-gray-50">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-blue-600 font-bold tracking-wide uppercase text-sm mb-2" data-aos="fade-up">What We Do</h2>
-                    <h3 class="text-4xl font-extrabold text-gray-900" data-aos="fade-up" data-aos-delay="100">Our Expertise</h3>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Service 1 -->
-                    <div class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl border border-gray-100 transition-all duration-300 hover:-translate-y-2" data-aos="fade-up">
-                        <div class="w-14 h-14 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 text-2xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <h4 class="text-xl font-bold mb-3 text-gray-900">Web Development</h4>
-                        <p class="text-gray-600 leading-relaxed">Building dynamic, responsive, and high-performance websites tailored to your needs. From e-commerce to custom web apps.</p>
-                    </div>
-
-                    <!-- Service 2 -->
-                    <div class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl border border-gray-100 transition-all duration-300 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
-                        <div class="w-14 h-14 rounded-xl bg-purple-50 flex items-center justify-center text-purple-600 text-2xl mb-6 group-hover:bg-purple-600 group-hover:text-white transition-colors">
-                            <i class="fas fa-film"></i>
-                        </div>
-                        <h4 class="text-xl font-bold mb-3 text-gray-900">Video Editing</h4>
-                        <p class="text-gray-600 leading-relaxed">Crafting compelling narratives from raw footage. Cinematic experiences using Premiere Pro and After Effects.</p>
-                    </div>
-
-                    <!-- Service 3 -->
-                    <div class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl border border-gray-100 transition-all duration-300 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
-                        <div class="w-14 h-14 rounded-xl bg-green-50 flex items-center justify-center text-green-600 text-2xl mb-6 group-hover:bg-green-600 group-hover:text-white transition-colors">
-                            <i class="fas fa-magic"></i>
-                        </div>
-                        <h4 class="text-xl font-bold mb-3 text-gray-900">Digital Creation</h4>
-                        <p class="text-gray-600 leading-relaxed">Bringing creative ideas to life through a blend of design, animation, and visual storytelling for all platforms.</p>
-                    </div>
-
-                    <!-- Service 4 -->
-                    <div class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl border border-gray-100 transition-all duration-300 hover:-translate-y-2" data-aos="fade-up">
-                        <div class="w-14 h-14 rounded-xl bg-yellow-50 flex items-center justify-center text-yellow-600 text-2xl mb-6 group-hover:bg-yellow-600 group-hover:text-white transition-colors">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <h4 class="text-xl font-bold mb-3 text-gray-900">Python & Automation</h4>
-                        <p class="text-gray-600 leading-relaxed">Developing robust backend systems, automation scripts, and powerful applications using the Python ecosystem.</p>
-                    </div>
-
-                    <!-- Service 5 -->
-                    <div class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl border border-gray-100 transition-all duration-300 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
-                        <div class="w-14 h-14 rounded-xl bg-red-50 flex items-center justify-center text-red-600 text-2xl mb-6 group-hover:bg-red-600 group-hover:text-white transition-colors">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h4 class="text-xl font-bold mb-3 text-gray-900">Social Strategy</h4>
-                        <p class="text-gray-600 leading-relaxed">Designing data-driven social media plans to grow your brand, engage your audience, and drive results.</p>
-                    </div>
-
-                    <!-- Service 6 -->
-                    <div class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl border border-gray-100 transition-all duration-300 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
-                        <div class="w-14 h-14 rounded-xl bg-indigo-50 flex items-center justify-center text-indigo-600 text-2xl mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
-                            <i class="fas fa-bullhorn"></i>
-                        </div>
-                        <h4 class="text-xl font-bold mb-3 text-gray-900">Digital Management</h4>
-                        <p class="text-gray-600 leading-relaxed">Overseeing your digital presence to ensure consistent branding, effective campaigns, and streamlined operations.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Connections / Partners -->
-        <section id="connections" class="py-16 bg-white border-y border-gray-100">
-            <div class="container mx-auto px-6 mb-10 text-center">
-                <h3 class="text-2xl font-bold text-gray-900" data-aos="fade-up">Trusted by Creators & Brands</h3>
-            </div>
-            
-            <div class="slider" data-aos="fade-in">
-                <div class="slide-track">
-                    <!-- 10 Unique Logos Duplicated for Loop -->
-                    <!-- Batch 1 -->
-                    <div class="slide"><a href="https://www.youtube.com/@INDepthStory" target="_blank"><img src="https://yt3.googleusercontent.com/rhICPV-vCayatPwZm0g0cur51rO-L6m1Df2y52I70Dn2tNOdS2K8Aio1Ag7n9UqdxmOeZ-BrQvA=s160-c-k-c0x00ffffff-no-rj" alt="In Depth Story"></a></div>
-                    <div class="slide"><a href="https://www.youtube.com/@TheNepaliComment" target="_blank"><img src="https://yt3.googleusercontent.com/r4DIRFDJM9YGviPWg1v3T8sx9ixjhOHQ-RvoI4pNqqABLG4kMttFhk54Ogf5y95wuNWcWdZRCw=s160-c-k-c0x00ffffff-no-rj" alt="The Nepali Comment"></a></div>
-                    <div class="slide"><a href="https://www.youtube.com/@MisguidedNepal" target="_blank"><img src="https://yt3.googleusercontent.com/0c78tYREZiq7GF35okfbummU3t5AIEI2HCODGnTiRh-oYOOOtEsYNtJl9oZHlJBBSjbXae6XkA=s160-c-k-c0x00ffffff-no-rj" alt="Misguided Nepal"></a></div>
-                    <div class="slide"><a href="https://www.youtube.com/@eon_nepal" target="_blank"><img src="https://yt3.googleusercontent.com/vIJ06md3etWT_Ow55w2mua3m3msQfpz8sfh9rPtRIu7baQ3kPLoaq60ZliE1FsDbGg5PZJLBamg=s160-c-k-c0x00ffffff-no-rj" alt="EON Nepal"></a></div>
-                    <div class="slide"><a href="https://www.youtube.com/@ProjectKura" target="_blank"><img src="https://yt3.googleusercontent.com/48McgyD0-nVwcjUWy65sdJUxY_J3ycb-s7dqHY4YRv03ZphhCDjwNToxzbUx4Gc1p6byynUPhQ=s160-c-k-c0x00ffffff-no-rj" alt="Project Kura"></a></div>
-                    <div class="slide"><a href="https://www.nepsepapertrading.com/" target="_blank"><img src="https://www.nepsepapertrading.com/assets/images/logo.png" alt="Nepse Paper Trading"></a></div>
-                    <div class="slide"><a href="https://www.youtube.com/@ThirdWorldNerd" target="_blank"><img src="https://yt3.googleusercontent.com/T8bcq2R1ixDEcCWUYi1GlR_lRCQrNgC1hnJ17nccU4h-ILAK1QZP2D0x7l7dSRwP42IH258jgic=s160-c-k-c0x00ffffff-no-rj" alt="Third World Nerd"></a></div>
-                    <div class="slide"><a href="https://www.youtube.com/@SahatKasa" target="_blank"><img src="https://yt3.googleusercontent.com/EXqz41vSA5Aj5rA_rE9alKwMU3s520EO0-lxzY3UeQRMjW4drhlaawODzaz3mW_7BiuyOOnPyg=s160-c-k-c0x00ffffff-no-rj" alt="Sahat Kasa"></a></div>
-                    <div class="slide"><a href="https://www.youtube.com/channel/UCf5Ms5Xcsk686s9VciRAhOQ" target="_blank"><img src="https://yt3.googleusercontent.com/wNPvFnInosJWFtwZRjNUsXb2lHx5h5grIMp3MuUgK8Tnz7HRErdvWX-rW-QPMwtSoImjaiz5cA=s160-c-k-c0x00ffffff-no-rj" alt="Partner"></a></div>
-                    <div class="slide"><a href="https://www.youtube.com/@swikarcodes" target="_blank"><img src="https://yt3.googleusercontent.com/hZ8CIqRgB33vZrnqlsoEn_W-h7SGUXCVkEKmBnnN_dmknpdJAHyo1RnZEb6_weNTsWAFctaLNw=s160-c-k-c0x00ffffff-no-rj" alt="Swikar Codes"></a></div>
-                    
-                    <!-- Batch 2 (Exact Duplicate) -->
-                    <div class="slide"><a href="https://www.youtube.com/@INDepthStory" target="_blank"><img src="https://yt3.googleusercontent.com/rhICPV-vCayatPwZm0g0cur51rO-L6m1Df2y52I70Dn2tNOdS2K8Aio1Ag7n9UqdxmOeZ-BrQvA=s160-c-k-c0x00ffffff-no-rj" alt="In Depth Story"></a></div>
-                    <div class="slide"><a href="https://www.youtube.com/@TheNepaliComment" target="_blank"><img src="https://yt3.googleusercontent.com/r4DIRFDJM9YGviPWg1v3T8sx9ixjhOHQ-RvoI4pNqqABLG4kMttFhk54Ogf5y95wuNWcWdZRCw=s160-c-k-c0x00ffffff-no-rj" alt="The Nepali Comment"></a></div>
-                    <div class="slide"><a href="https://www.youtube.com/@MisguidedNepal" target="_blank"><img src="https://yt3.googleusercontent.com/0c78tYREZiq7GF35okfbummU3t5AIEI2HCODGnTiRh-oYOOOtEsYNtJl9oZHlJBBSjbXae6XkA=s160-c-k-c0x00ffffff-no-rj" alt="Misguided Nepal"></a></div>
-                    <div class="slide"><a href="https://www.youtube.com/@eon_nepal" target="_blank"><img src="https://yt3.googleusercontent.com/vIJ06md3etWT_Ow55w2mua3m3msQfpz8sfh9rPtRIu7baQ3kPLoaq60ZliE1FsDbGg5PZJLBamg=s160-c-k-c0x00ffffff-no-rj" alt="EON Nepal"></a></div>
-                    <div class="slide"><a href="https://www.youtube.com/@ProjectKura" target="_blank"><img src="https://yt3.googleusercontent.com/48McgyD0-nVwcjUWy65sdJUxY_J3ycb-s7dqHY4YRv03ZphhCDjwNToxzbUx4Gc1p6byynUPhQ=s160-c-k-c0x00ffffff-no-rj" alt="Project Kura"></a></div>
-                    <div class="slide"><a href="https://www.nepsepapertrading.com/" target="_blank"><img src="https://www.nepsepapertrading.com/assets/images/logo.png" alt="Nepse Paper Trading"></a></div>
-                    <div class="slide"><a href="https://www.youtube.com/@ThirdWorldNerd" target="_blank"><img src="https://yt3.googleusercontent.com/T8bcq2R1ixDEcCWUYi1GlR_lRCQrNgC1hnJ17nccU4h-ILAK1QZP2D0x7l7dSRwP42IH258jgic=s160-c-k-c0x00ffffff-no-rj" alt="Third World Nerd"></a></div>
-                    <div class="slide"><a href="https://www.youtube.com/@SahatKasa" target="_blank"><img src="https://yt3.googleusercontent.com/EXqz41vSA5Aj5rA_rE9alKwMU3s520EO0-lxzY3UeQRMjW4drhlaawODzaz3mW_7BiuyOOnPyg=s160-c-k-c0x00ffffff-no-rj" alt="Sahat Kasa"></a></div>
-                    <div class="slide"><a href="https://www.youtube.com/channel/UCf5Ms5Xcsk686s9VciRAhOQ" target="_blank"><img src="https://yt3.googleusercontent.com/wNPvFnInosJWFtwZRjNUsXb2lHx5h5grIMp3MuUgK8Tnz7HRErdvWX-rW-QPMwtSoImjaiz5cA=s160-c-k-c0x00ffffff-no-rj" alt="Partner"></a></div>
-                    <div class="slide"><a href="https://www.youtube.com/@swikarcodes" target="_blank"><img src="https://yt3.googleusercontent.com/hZ8CIqRgB33vZrnqlsoEn_W-h7SGUXCVkEKmBnnN_dmknpdJAHyo1RnZEb6_weNTsWAFctaLNw=s160-c-k-c0x00ffffff-no-rj" alt="Swikar Codes"></a></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-24 bg-gray-900 text-white relative overflow-hidden">
-            <!-- Decorative Blobs -->
-            <div class="absolute top-0 right-0 w-96 h-96 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-            <div class="absolute bottom-0 left-0 w-96 h-96 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
-
-            <div class="container mx-auto px-6 relative z-10">
-                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 bg-gray-800 p-8 md:p-12 rounded-3xl shadow-2xl border border-gray-700" data-aos="zoom-in-up">
-                    <div class="flex flex-col justify-center">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-6">Let's Create Something Amazing</h2>
-                        <p class="text-gray-400 mb-8 text-lg">Ready to start your digital journey? Fill out the form and we'll get back to you within 24 hours.</p>
-                        
-                        <div class="space-y-4">
-                            <div class="flex items-center gap-4 text-gray-300">
-                                <div class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center text-blue-400"><i class="fas fa-envelope"></i></div>
-                                <span>business.mystic.nepal@gmail.com</span>
-                            </div>
-                            <div class="flex items-center gap-4 text-gray-300">
-                                <div class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center text-purple-400"><i class="fas fa-map-marker-alt"></i></div>
-                                <span>Kathmandu, Nepal</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <form action="https://formspree.io/f/mqawyzyg" method="POST" class="space-y-6">
+            <!-- RIGHT - Visual card -->
+            <div class="sn-visual">
+                <div class="sn-visual-header">
+                    <div class="sn-logo-area">
+                        <div class="sn-logo-icon">SN</div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-400 mb-2">Full Name</label>
-                            <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors placeholder-gray-500" placeholder="John Doe">
+                            <div class="sn-logo-name">SN Network</div>
+                            <div class="sn-logo-sub">by Mystic Nepal Studios</div>
                         </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-400 mb-2">Email Address</label>
-                            <input type="email" name="email" required class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors placeholder-gray-500" placeholder="john@example.com">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-400 mb-2">Message</label>
-                            <textarea name="message" rows="4" required class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors placeholder-gray-500" placeholder="Tell us about your project..."></textarea>
-                        </div>
-                        <button type="submit" class="w-full py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-lg hover:shadow-lg hover:shadow-blue-500/30 transition-all transform hover:-translate-y-1">
-                            Send Message
-                        </button>
-                    </form>
+                    </div>
+                    <div class="sn-live-badge"><div class="sn-live-dot"></div> Active</div>
+                </div>
+                <div class="sn-stats-row">
+                    <div class="sn-stat-card">
+                        <div class="sn-stat-val">3<span>+</span></div>
+                        <div class="sn-stat-lbl">Creators</div>
+                    </div>
+                    <div class="sn-stat-card">
+                        <div class="sn-stat-val">100<span>k+</span></div>
+                        <div class="sn-stat-lbl">Combined Impressions </div>
+                    </div>
+                    <div class="sn-stat-card">
+                        <div class="sn-stat-val">5+</div>
+                        <div class="sn-stat-lbl">Collabs</div>
+                    </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
 
-    <!-- Footer -->
-    <footer class="bg-black text-gray-400 py-12 border-t border-gray-800">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-6 md:mb-0 text-center md:text-left">
-                    <span class="text-2xl font-bold text-white tracking-tight">Mystic Nepal</span>
-                    <p class="mt-2 text-sm">Empowering brands in Nepal & beyond.</p>
+        <!-- WHAT YOU GET - Cards -->
+        <div class="sn-cards">
+            <div class="sn-creator-card">
+                <div class="sn-card-icon" style="background:rgba(245,197,24,0.12)">🤝</div>
+                <div class="sn-card-title">Collab Matchmaking</div>
+                <p class="sn-card-desc">Get matched with creators who complement your content style. Cross-promote, co-create, and grow each other's audiences through strategic collaborations.</p>
+                <span class="sn-card-tag">Community</span>
+            </div>
+            <div class="sn-creator-card">
+                <div class="sn-card-icon" style="background:rgba(61,153,112,0.15)">🎬</div>
+                <div class="sn-card-title">Production Support</div>
+                <p class="sn-card-desc">Access Mystic Nepal's video editing, thumbnail design, and content strategy resources at exclusive network rates. Your content quality, elevated.</p>
+                <span class="sn-card-tag">Resources</span>
+            </div>
+            <div class="sn-creator-card">
+                <div class="sn-card-icon" style="background:rgba(232,108,58,0.12)">💰</div>
+                <div class="sn-card-title">Brand Deals & Revenue</div>
+                <p class="sn-card-desc">We negotiate brand sponsorships collectively so even smaller creators get access to deals that would normally require 100k+ subscribers to qualify for.</p>
+                <span class="sn-card-tag">Monetization</span>
+            </div>
+            <div class="sn-creator-card">
+                <div class="sn-card-icon" style="background:rgba(99,102,241,0.15)">📚</div>
+                <div class="sn-card-title">Creator Education</div>
+                <p class="sn-card-desc">Weekly sessions, playbooks, SEO guides, analytics walkthroughs, and growth frameworks — everything you need to become a smarter, more strategic creator.</p>
+                <span class="sn-card-tag">Learning</span>
+            </div>
+            <div class="sn-creator-card">
+                <div class="sn-card-icon" style="background:rgba(236,72,153,0.12)">📊</div>
+                <div class="sn-card-title">Analytics & Insights</div>
+                <p class="sn-card-desc">Understand what's working across the network. Benchmark your growth, spot trends early, and make data-driven decisions for your channel.</p>
+                <span class="sn-card-tag">Data</span>
+            </div>
+            <div class="sn-creator-card">
+                <div class="sn-card-icon" style="background:rgba(245,197,24,0.12)">🌐</div>
+                <div class="sn-card-title">Web & Tech Access</div>
+                <p class="sn-card-desc">Every SN Network member gets priority access to Mystic Nepal's web development and automation tools to build their creator brand's digital home.</p>
+                <span class="sn-card-tag">Technology</span>
+            </div>
+        </div>
+
+        <!-- Comparison Banner -->
+        <div class="sn-compare">
+            <div class="sn-compare-side">
+                <div class="sn-compare-label">The Inspiration</div>
+                <div class="sn-compare-name">Zerodha's Z-Connect</div>
+                <p class="sn-compare-desc">India's largest fintech built a network that connected traders, educators, and investors into one thriving community — democratizing access to knowledge and opportunity.</p>
+            </div>
+            <div class="sn-compare-divider">
+                <div class="sn-compare-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="sn-vs">SN</div>
+                <div class="sn-compare-arrow"><i class="fas fa-arrow-left"></i></div>
+            </div>
+            <div class="sn-compare-side">
+                <div class="sn-compare-label">Our Answer for Nepal</div>
+                <div class="sn-compare-name">SN Network</div>
+                <p class="sn-compare-desc">We're doing the same for Nepal's creator economy — connecting YouTubers, editors, strategists, and brands into one ecosystem that lifts everyone together.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact-section">
+        <div class="contact-grid">
+            <div class="contact-left">
+                <div class="section-eyebrow" style="color:var(--green-bright);">
+                    <span style="display:inline-block;width:24px;height:2px;background:var(--green-bright);"></span>
+                    Get In Touch
                 </div>
-                
-                <div class="flex gap-6 text-xl">
-                    <a href="mailto:business.mystic.nepal@gmail.com" class="hover:text-white transition-colors"><i class="fas fa-envelope"></i></a>
-                    <a href="https://www.instagram.com/sap_ghimire/" target="_blank" class="hover:text-pink-500 transition-colors"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/company/mysticnepal/" target="_blank" class="hover:text-blue-600 transition-colors"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.youtube.com/@Mystic_Nepal" target="_blank" class="hover:text-red-600 transition-colors"><i class="fab fa-youtube"></i></a>
+                <h2 class="contact-title">Let's Create Something Amazing Together</h2>
+                <p class="contact-desc">Ready to elevate your digital presence? Fill out the form and we'll get back to you within 24 hours with a tailored proposal.</p>
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+                        <span class="ci-text"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8ceef9ffe5e2e9ffffa2e1f5fff8e5efa2e2e9fcede0ccebe1ede5e0a2efe3e1">[email&#160;protected]</a></span>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <span class="ci-text">Kathmandu, Nepal</span>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="ci-icon"><i class="fas fa-clock"></i></div>
+                        <span class="ci-text">Response within 24 hours</span>
+                    </div>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-600">
-                &copy; 2025 Mystic Nepal Studios. All Rights Reserved.
+            <form class="contact-form" action="https://formspree.io/f/mqawyzyg" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" name="name" class="form-input" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" name="email" class="form-input" placeholder="your@email.com" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Service Needed</label>
+                    <input type="text" name="service" class="form-input" placeholder="e.g. Web Development, Video Editing...">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Your Message</label>
+                    <textarea name="message" class="form-input" placeholder="Tell us about your project and goals..." required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Send Message &rarr;</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <div class="nav-logo-icon">MN</div>
+                    <span class="footer-logo-text">Mystic Nepal</span>
+                </div>
+                <p class="footer-tagline">Empowering brands in Nepal and beyond through digital excellence — web, video, strategy, and automation.</p>
+                <div class="footer-socials">
+                    <a href="/cdn-cgi/l/email-protection#3b594e4852555e4848155642484f525815555e4b5a577b5c565a525715585456" class="social-btn"><i class="fas fa-envelope"></i>mysticnepalstudios@gmail.com</a>
+                    <a href="https://www.instagram.com/_mystic_nepal_/" target="_blank" class="social-btn"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/mysticnepal/" target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/@Mystic_Nepal" target="_blank" class="social-btn"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="footer-col-title">Services</h4>
+                <div class="footer-links">
+                    <a href="#services">Web Development</a>
+                    <a href="#services">Video Editing</a>
+                    <a href="#services">Digital Creation</a>
+                    <a href="#services">Python & Automation</a>
+                    <a href="#services">Social Strategy</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="footer-col-title">Better Whena</h4>
+                <div class="footer-links">
+                    <a href="#">Testimonials</a>
+                    <a href="#">Case Studies</a>
+                    <a href="#">Design</a>
+                    <a href="#">Publications</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="footer-col-title">Learns</h4>
+                <div class="footer-links">
+                    <a href="#">Courses</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Resources</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="footer-col-title">Company</h4>
+                <div class="footer-links">
+                    <a href="#">Some Digital Service</a>
+                    <a href="#">Community Forum</a>
+                    <a href="#">Why Choose Us?</a>
+                    <a href="#">Our Partners</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span class="footer-copy">&copy; 2025 Mystic Nepal Studios. All Rights Reserved.</span>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms</a>
+                <a href="#">Cookies</a>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // Initialize AOS Animation
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 50,
-        });
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Scroll reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(el => {
+                if (el.isIntersecting) {
+                    el.target.style.opacity = '1';
+                    el.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
 
-        // Mobile Menu Toggle
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-    </script>
-</body>
-</html>
+        document.querySelectorAll('.service-card, .why
